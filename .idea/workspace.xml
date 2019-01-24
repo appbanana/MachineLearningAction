@@ -37,49 +37,41 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="1" />
-          <entry key="py" value="22" />
+          <entry key="py" value="25" />
           <entry key="txt" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="12" />
-          <entry key="Python" value="22" />
+          <entry key="Python" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="4212" />
+          <entry key="py" value="5142" />
           <entry key="txt" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="4212" />
+          <entry key="Python" value="5142" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chapter03/data/lenses.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="33" lean-forward="true" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chapter03/01-简单的计算信息熵.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="27" column="43" lean-forward="true" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+            <state relative-caret-position="316">
+              <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
-                <marker date="1548317233160" expanded="true" signature="310:727" ph="..." />
+                <marker date="1548322447484" expanded="true" signature="767:2085" ph="..." />
+                <marker date="1548322447484" expanded="true" signature="1180:2085" ph="..." />
               </folding>
             </state>
           </provider>
@@ -111,6 +103,7 @@
         <option value="$PROJECT_DIR$/chapter02/KNN.py" />
         <option value="$PROJECT_DIR$/chapter02/01-KNN预测约会.py" />
         <option value="$PROJECT_DIR$/chapter02/02-KNN之手写识别系统.py" />
+        <option value="$PROJECT_DIR$/chapter02/03-sklearn之手写识别.py" />
         <option value="$PROJECT_DIR$/chapter03/01-简单的计算信息熵.py" />
       </list>
     </option>
@@ -240,6 +233,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1247" y="270" width="1455" height="1000" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25336164" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -393,17 +387,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chapter02/02-KNN之手写识别系统.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <marker date="1548314337658" expanded="true" signature="487:1560" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chapter03/data/classifierStorage.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -428,13 +411,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/chapter02/02-KNN之手写识别系统.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="40" column="40" lean-forward="true" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter02/03-sklearn之手写识别.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="56" column="36" lean-forward="true" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/chapter03/01-简单的计算信息熵.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="27" column="43" lean-forward="true" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+        <state relative-caret-position="316">
+          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <marker date="1548317233160" expanded="true" signature="310:727" ph="..." />
+            <marker date="1548322447484" expanded="true" signature="767:2085" ph="..." />
+            <marker date="1548322447484" expanded="true" signature="1180:2085" ph="..." />
           </folding>
         </state>
       </provider>
