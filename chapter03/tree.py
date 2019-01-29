@@ -173,3 +173,47 @@ def get_tree_depth(my_tree):
         if this_depth > max_depth:
             max_depth = this_depth
     return max_depth
+
+
+def classify(input_tree, feat_labels, test_vec):
+    # 获取树的第一特征的名称 eg：'no surfacing'
+    first_str = list(input_tree.keys())[0]
+    sec_dict = input_tree[first_str]
+    # 获取特征在feat_labels的所处的位置
+    feat_index = feat_labels.index(first_str)
+    # 获取测试属性 对应的特征值 eg：0 or 1
+    key = test_vec[feat_index]
+    # 获取特征值在树中对应的value
+    feat_value = sec_dict[key]
+    if isinstance(feat_value, dict):
+        class_label = classify(feat_value, feat_labels, test_vec)
+    else:
+        class_label = feat_value
+    return class_label
+
+
+def store_tree(input_tree, file_name):
+    """
+    序列化数据
+    :param input_tree: 树结构（字典类型的）
+    :param file_name: 文件路径
+    :return:
+    """
+    import pickle
+    import json
+    with open(file_name, 'wb') as fw:
+        # json.dumps(d)
+        pickle.dump(input_tree, fw)
+
+
+def grab_tree(file_name):
+    """
+    反序列化数据
+    :param file_name: 文件路径
+    :return:
+    """
+    import pickle
+    f = open(file_name, 'rb')
+    data = pickle.load(f)
+    f.close()
+    return data
