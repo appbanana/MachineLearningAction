@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b598224-62ab-4455-9130-d594899af009" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/chapter07/adaboost.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter06/01-寻找最大间隔.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter06/svm.py" beforeDir="false" afterPath="$PROJECT_DIR$/chapter06/svm.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +19,9 @@
     <session id="251643585">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
+          <entry key="project.closed" value="11" />
           <entry key="project.open.time.18" value="1" />
+          <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.29" value="1" />
@@ -31,7 +32,7 @@
           <entry key="project.open.time.42" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.91" value="1" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.opened" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -39,23 +40,23 @@
           <entry key="gitignore" value="2" />
           <entry key="md" value="2" />
           <entry key="png" value="5" />
-          <entry key="py" value="94" />
-          <entry key="txt" value="24" />
+          <entry key="py" value="111" />
+          <entry key="txt" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Image" value="5" />
           <entry key="Markdown" value="2" />
-          <entry key="PLAIN_TEXT" value="26" />
-          <entry key="Python" value="94" />
+          <entry key="PLAIN_TEXT" value="28" />
+          <entry key="Python" value="111" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="6" />
           <entry key="md" value="250" />
-          <entry key="py" value="25109" />
+          <entry key="py" value="28094" />
           <entry key="txt" value="2" />
         </counts>
       </usages-collector>
@@ -63,50 +64,37 @@
         <counts>
           <entry key="Markdown" value="250" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="25115" />
+          <entry key="Python" value="28100" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chapter07/adaboost.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/chapter06/05-手写识别demo.py">
+        <entry file="file://$PROJECT_DIR$/chapter07/05-利用adaBoost预测马疝病.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="114" selection-start-line="114" selection-end-line="114" />
+            <state relative-caret-position="444">
+              <caret line="160" column="26" selection-start-line="160" selection-start-column="26" selection-end-line="160" selection-end-column="26" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
-                <marker date="1550217024774" expanded="true" signature="572:1038" ph="..." />
-                <marker date="1550217024774" expanded="true" signature="1139:2514" ph="..." />
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chapter06/svmFullKernel.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="352" column="19" lean-forward="true" selection-start-line="352" selection-start-column="19" selection-end-line="352" selection-end-column="19" />
-              <folding>
-                <marker date="1550215126383" expanded="true" signature="11685:11686" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chapter06/04-完整版的SMO算法Kernel版.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="49" column="34" selection-start-line="49" selection-end-line="50" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-                <marker date="1550212700181" expanded="true" signature="272:3065" ph="..." />
-              </folding>
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/chapter07/data/horseColicTraining2.txt">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -168,6 +156,11 @@
         <option value="$PROJECT_DIR$/chapter06/04-完整版的SMO算法Kernel版.py" />
         <option value="$PROJECT_DIR$/chapter06/svmFullKernel.py" />
         <option value="$PROJECT_DIR$/chapter06/05-手写识别demo.py" />
+        <option value="$PROJECT_DIR$/chapter07/adaboost.py" />
+        <option value="$PROJECT_DIR$/chapter07/01-构建单层决策树.py" />
+        <option value="$PROJECT_DIR$/chapter07/02-完整adaBoost算法实现.py" />
+        <option value="$PROJECT_DIR$/chapter07/03-测试算法.py" />
+        <option value="$PROJECT_DIR$/chapter07/05-利用adaBoost预测马疝病.py" />
       </list>
     </option>
   </component>
@@ -178,8 +171,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1103" />
-    <option name="y" value="256" />
+    <option name="x" value="1051" />
+    <option name="y" value="259" />
     <option name="width" value="1455" />
     <option name="height" value="1000" />
   </component>
@@ -191,7 +184,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -223,26 +215,24 @@
             <path>
               <item name="MachineLearningAction" type="b2602c69:ProjectViewProjectNode" />
               <item name="MachineLearningAction" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter06" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter05" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MachineLearningAction" type="b2602c69:ProjectViewProjectNode" />
               <item name="MachineLearningAction" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter06" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter05" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MachineLearningAction" type="b2602c69:ProjectViewProjectNode" />
               <item name="MachineLearningAction" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter06" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="digits" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter07" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MachineLearningAction" type="b2602c69:ProjectViewProjectNode" />
               <item name="MachineLearningAction" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter06" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter07" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MachineLearningAction" type="b2602c69:ProjectViewProjectNode" />
@@ -252,6 +242,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -262,11 +253,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/chapter07/data" />
       <recent name="$PROJECT_DIR$/chapter06/data" />
       <recent name="$PROJECT_DIR$/chapter05/data" />
       <recent name="$PROJECT_DIR$/chapter04/data" />
       <recent name="$PROJECT_DIR$/chapter03/data" />
-      <recent name="$PROJECT_DIR$/chapter02/data" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -324,9 +315,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1103" y="256" width="1455" height="1000" extended-state="0" />
+    <frame x="1051" y="259" width="1455" height="1000" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28520876" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28874734" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -357,38 +348,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/chapter02/data/datingTestSet.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="42" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chapter02/data/testDigits/0_1.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chapter02/data/testDigits/0_86.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chapter02/data/testDigits/1_0.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chapter02/data/testDigits/0_0.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chapter03/data/classifierStorage.txt" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="87" column="5" lean-forward="true" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chapter03/tree_plot.py" />
     <entry file="file://$PROJECT_DIR$/chapter03/02-绘制决策树.py" />
     <entry file="file://$PROJECT_DIR$/chapter03/data/classifier_storage.txt">
       <provider selected="true" editor-type-id="text-editor" />
@@ -414,13 +373,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/chapter04/使用朴素贝叶斯从个人广告中获取区域倾向.py" />
-    <entry file="file://$PROJECT_DIR$/chapter04/bayes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-664">
-          <caret line="79" column="39" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chapter03/02-绘制决策树与分类.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -507,13 +459,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chapter05/03-从疝气预测病马死亡率.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chapter05/01-使用梯度上升算法找最佳参数.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -521,23 +466,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chapter05/logRegres.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="15" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chapter06/01-寻找最大间隔.py" />
     <entry file="file://$PROJECT_DIR$/chapter06/data/testSet.txt">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chapter06/01-数据可视化.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="30" column="16" lean-forward="true" selection-start-line="30" selection-end-line="31" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chapter06/img/Figure_01.png">
       <provider selected="true" editor-type-id="images" />
@@ -556,11 +487,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
           <caret line="137" lean-forward="true" selection-start-line="137" selection-end-line="137" />
-          <folding>
-            <marker date="1550128411444" expanded="true" signature="126:131" ph="..." />
-            <marker date="1550128411444" expanded="true" signature="564:569" ph="..." />
-            <marker date="1550128411444" expanded="true" signature="839:844" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -568,32 +494,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1009">
           <caret line="244" column="53" lean-forward="true" selection-start-line="244" selection-start-column="53" selection-end-line="244" selection-end-column="53" />
-          <folding>
-            <element signature="e#982#4818#0" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chapter06/data/testSetRBF.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-189" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chapter02/01-KNN预测约会.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="8" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chapter06/03-完整版的SMO算法.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="37" column="37" selection-start-line="37" selection-end-line="38" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chapter06/img/Figure_04_1.png">
@@ -613,9 +519,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -626,31 +529,132 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="369">
           <caret line="49" column="34" selection-start-line="49" selection-end-line="50" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <marker date="1550212700181" expanded="true" signature="272:3065" ph="..." />
-          </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get-pip.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/chapter06/svmFullKernel.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="281">
           <caret line="352" column="19" lean-forward="true" selection-start-line="352" selection-start-column="19" selection-end-line="352" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter07/data/horseColicTest2.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter06/05-手写识别demo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="111" column="23" selection-end-line="116" />
           <folding>
-            <marker date="1550215126383" expanded="true" signature="11685:11686" ph="..." />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chapter06/05-手写识别demo.py">
+    <entry file="file://$PROJECT_DIR$/chapter06/03-完整版的SMO算法.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="114" selection-start-line="114" selection-end-line="114" />
+        <state relative-caret-position="629">
+          <caret line="37" column="37" selection-start-line="37" selection-end-line="38" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <marker date="1550217024774" expanded="true" signature="572:1038" ph="..." />
-            <marker date="1550217024774" expanded="true" signature="1139:2514" ph="..." />
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter02/01-KNN预测约会.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="8" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter06/01-数据可视化.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" selection-start-line="25" selection-end-line="26" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter07/adaboost.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter07/01-构建单层决策树.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-494">
+          <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <marker date="1550466901529" expanded="true" signature="980:2486" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter07/02-完整adaBoost算法实现.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-196">
+          <caret line="87" column="32" selection-start-line="87" selection-end-line="88" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter04/bayes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2352">
+          <caret line="79" column="39" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter05/logRegres.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1417">
+          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter05/03-从疝气预测病马死亡率.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="4" selection-start-line="4" selection-end-line="19" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter07/03-测试算法.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-475">
+          <caret line="87" column="67" selection-start-line="87" selection-start-column="60" selection-end-line="87" selection-end-column="67" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <marker date="1550472606463" expanded="true" signature="4031:4401" ph="..." />
+            <marker date="1550472606463" expanded="true" signature="4188:4197" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter07/data/horseColicTraining2.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter07/05-利用adaBoost预测马疝病.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="160" column="26" selection-start-line="160" selection-start-column="26" selection-end-line="160" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
