@@ -63,7 +63,7 @@ def show_classifer(x_data, y_labels, w, b):
 
 
 if __name__ == '__main__':
-    # svm参考文章 写的非常还 https://blog.csdn.net/c406495762/article/details/78072313
+    # svm参考文章 写的非常好 https://blog.csdn.net/c406495762/article/details/78072313
     data_arr, label_arr = svm.load_dataset('./data/testSet.txt')
     # show_dataset(data_arr, label_arr)
     # 简化版smo算法 获得一系列的alphas和b
