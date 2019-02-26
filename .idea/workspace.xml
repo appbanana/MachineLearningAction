@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b598224-62ab-4455-9130-d594899af009" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/scikit-learn/svm/07-探索软间隔影响超平面.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scikit-learn/svm/08-样本不均衡问题.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scikit-learn/svm/09-svc模型的评估指标:混淆矩阵.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python3.7-test/01-re模块.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scikit-learn/svm/10-预测明天是否会下雨.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scikit-learn/svm/data/Cityclimate.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scikit-learn/svm/data/cityll.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scikit-learn/svm/data/samplecity.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scikit-learn/svm/data/weatherAUS.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scikit-learn/决策树/01-决策树.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scikit-learn/决策树/data/data.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scikit-learn/决策树/data/test.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/机器学习实战/chapter06/02-简化版的SMO算法.py" beforeDir="false" afterPath="$PROJECT_DIR$/机器学习实战/chapter06/02-简化版的SMO算法.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scikit-learn/svm/09-roc曲线相关问题.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/scikit-learn/svm/09-roc曲线相关问题.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,29 +27,30 @@
     <session id="251643585">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="14" />
+          <entry key="project.closed" value="17" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.23" value="2" />
           <entry key="project.open.time.24" value="1" />
-          <entry key="project.open.time.25" value="1" />
+          <entry key="project.open.time.25" value="2" />
           <entry key="project.open.time.29" value="1" />
-          <entry key="project.open.time.32" value="1" />
+          <entry key="project.open.time.32" value="2" />
           <entry key="project.open.time.39" value="1" />
           <entry key="project.open.time.40" value="1" />
           <entry key="project.open.time.41" value="1" />
           <entry key="project.open.time.42" value="1" />
+          <entry key="project.open.time.45" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.91" value="1" />
-          <entry key="project.opened" value="15" />
+          <entry key="project.opened" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="csv" value="1" />
+          <entry key="csv" value="6" />
           <entry key="gitignore" value="2" />
-          <entry key="ipynb" value="12" />
+          <entry key="ipynb" value="17" />
           <entry key="md" value="2" />
           <entry key="png" value="9" />
           <entry key="py" value="137" />
@@ -53,8 +59,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSV" value="1" />
-          <entry key="IPNB" value="12" />
+          <entry key="CSV" value="6" />
+          <entry key="IPNB" value="17" />
           <entry key="Image" value="9" />
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="28" />
@@ -76,6 +82,7 @@
           <entry key="Python" value="30389" />
         </counts>
       </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts" />
     </session>
   </component>
   <component name="FileEditorManager">
@@ -92,11 +99,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scikit-learn/svm/03-非线性绘制决策边界.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
-              <caret line="20" column="39" lean-forward="true" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+            <state relative-caret-position="238">
+              <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -105,26 +112,17 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scikit-learn/svm/test.py">
+        <entry file="file://$PROJECT_DIR$/scikit-learn/svm/data/cityll.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1292">
-              <caret line="79" column="14" selection-start-line="17" selection-end-line="79" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="255">
+              <caret line="15" column="36" lean-forward="true" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scikit-learn/svm/01-绘制线性决策边界.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scikit-learn/决策树/data/test.csv">
+          <provider selected="true" editor-type-id="csv-text-editor" />
         </entry>
       </file>
     </leaf>
@@ -150,9 +148,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/chapter02/data/datingTestSet.txt" />
-        <option value="$PROJECT_DIR$/chapter02/kNN2.py" />
-        <option value="$PROJECT_DIR$/chapter02/MyKNN.py" />
         <option value="$PROJECT_DIR$/chapter02/KNN.py" />
         <option value="$PROJECT_DIR$/chapter02/01-KNN预测约会.py" />
         <option value="$PROJECT_DIR$/chapter02/03-sklearn之手写识别.py" />
@@ -201,6 +196,9 @@
         <option value="$PROJECT_DIR$/scikit-learn/svm/07-探索软间隔影响超平面.ipynb" />
         <option value="$PROJECT_DIR$/scikit-learn/svm/08-样本不均衡问题.ipynb" />
         <option value="$PROJECT_DIR$/scikit-learn/svm/09-svc模型的评估指标:混淆矩阵.ipynb" />
+        <option value="$PROJECT_DIR$/scikit-learn/svm/10-预测明天是否会下雨.ipynb" />
+        <option value="$PROJECT_DIR$/python3.7-test/01-re模块.ipynb" />
+        <option value="$PROJECT_DIR$/scikit-learn/决策树/01-决策树.ipynb" />
       </list>
     </option>
   </component>
@@ -211,8 +209,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1051" />
-    <option name="y" value="259" />
+    <option name="x" value="1144" />
+    <option name="y" value="250" />
     <option name="width" value="1455" />
     <option name="height" value="1000" />
   </component>
@@ -224,7 +222,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -241,24 +238,14 @@
               <item name="MachineLearningAction" type="b2602c69:ProjectViewProjectNode" />
               <item name="MachineLearningAction" type="462c0819:PsiDirectoryNode" />
               <item name="scikit-learn" type="462c0819:PsiDirectoryNode" />
-              <item name="svm" type="462c0819:PsiDirectoryNode" />
+              <item name="决策树" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MachineLearningAction" type="b2602c69:ProjectViewProjectNode" />
               <item name="MachineLearningAction" type="462c0819:PsiDirectoryNode" />
-              <item name="机器学习实战" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MachineLearningAction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MachineLearningAction" type="462c0819:PsiDirectoryNode" />
-              <item name="机器学习实战" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter05" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MachineLearningAction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MachineLearningAction" type="462c0819:PsiDirectoryNode" />
-              <item name="机器学习实战" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter06" type="462c0819:PsiDirectoryNode" />
+              <item name="scikit-learn" type="462c0819:PsiDirectoryNode" />
+              <item name="决策树" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MachineLearningAction" type="b2602c69:ProjectViewProjectNode" />
@@ -268,6 +255,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -277,15 +265,16 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/scikit-learn" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scikit-learn/决策树/data" />
+      <recent name="$PROJECT_DIR$/scikit-learn/svm/data" />
       <recent name="$PROJECT_DIR$/chapter07/data" />
       <recent name="$PROJECT_DIR$/chapter06/data" />
       <recent name="$PROJECT_DIR$/chapter05/data" />
-      <recent name="$PROJECT_DIR$/chapter04/data" />
-      <recent name="$PROJECT_DIR$/chapter03/data" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scikit-learn" />
+      <recent name="$PROJECT_DIR$/scikit-learn/svm/data" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -343,10 +332,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1051" y="259" width="1455" height="1000" extended-state="0" />
-    <editor active="true" />
+    <frame x="1144" y="250" width="1455" height="1000" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3014862" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31422505" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -377,15 +365,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/chapter06/img/Figure_03.png" />
-    <entry file="file://$PROJECT_DIR$/chapter06/svm.py" />
-    <entry file="file://$PROJECT_DIR$/chapter06/svmFull.py" />
-    <entry file="file://$PROJECT_DIR$/chapter06/data/testSetRBF.txt" />
-    <entry file="file://$PROJECT_DIR$/chapter06/img/Figure_04_1.png" />
-    <entry file="file://$PROJECT_DIR$/chapter06/img/Figure_04_2.png" />
-    <entry file="file://$PROJECT_DIR$/chapter02/KNN.py" />
-    <entry file="file://$PROJECT_DIR$/chapter02/02-KNN之手写识别系统.py" />
-    <entry file="file://$PROJECT_DIR$/chapter06/data/digits/testDigits/1_0.txt" />
     <entry file="file://$PROJECT_DIR$/chapter06/04-完整版的SMO算法Kernel版.py" />
     <entry file="file://$PROJECT_DIR$/get-pip.py" />
     <entry file="file://$PROJECT_DIR$/chapter06/svmFullKernel.py" />
@@ -470,6 +449,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scikit-learn/svm/07-探索软间隔影响超平面.py" />
+    <entry file="file://$PROJECT_DIR$/scikit-learn/svm/07-探索软间隔影响超平面.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scikit-learn/jupyter快捷键01.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scikit-learn/jupyter快捷键02.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scikit-learn/svm/08-样本不均衡问题.ipynb" />
+    <entry file="file://$PROJECT_DIR$/scikit-learn/svm/09-svc模型的评估指标:混淆矩阵.ipynb" />
+    <entry file="file://$PROJECT_DIR$/scikit-learn/svm/09-roc曲线相关问题.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scikit-learn/svm/08-样本不均衡问题及混淆矩阵.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scikit-learn/svm/10-预测明天是否会下雨.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scikit-learn/svm/02-绘制线性决策边界整理后版本.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
@@ -479,6 +495,28 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scikit-learn/svm/03-非线性绘制决策边界.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scikit-learn/svm/data/samplecity.csv">
+      <provider editor-type-id="csv-text-editor" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scikit-learn/svm/data/Cityclimate.csv">
+      <provider editor-type-id="csv-text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="39" lean-forward="true" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/scikit-learn/svm/test.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -499,45 +537,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scikit-learn/svm/07-探索软间隔影响超平面.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scikit-learn/svm/07-探索软间隔影响超平面.ipynb">
+    <entry file="file://$PROJECT_DIR$/python3.7-test/01-re模块.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
           <selected id="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scikit-learn/jupyter快捷键01.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scikit-learn/jupyter快捷键02.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scikit-learn/svm/08-样本不均衡问题.ipynb">
+    <entry file="file://$PROJECT_DIR$/scikit-learn/决策树/01-决策树.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
           <selected id="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scikit-learn/svm/09-svc模型的评估指标:混淆矩阵.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scikit-learn/svm/03-非线性绘制决策边界.py">
+    <entry file="file://$PROJECT_DIR$/scikit-learn/svm/data/cityll.csv">
+      <provider editor-type-id="csv-text-editor" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="20" column="39" lean-forward="true" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="255">
+          <caret line="15" column="36" lean-forward="true" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scikit-learn/决策树/data/test.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
   </component>
 </project>
