@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b598224-62ab-4455-9130-d594899af009" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/scikit-learn/决策树/02-分类树在合成数据集上的表现.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scikit-learn/决策树/01-决策树.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/scikit-learn/决策树/01-决策树.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scikit-learn/随机森林/01-决策树和随机森林对比.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +41,7 @@
         <counts>
           <entry key="csv" value="7" />
           <entry key="gitignore" value="2" />
-          <entry key="ipynb" value="18" />
+          <entry key="ipynb" value="19" />
           <entry key="md" value="2" />
           <entry key="png" value="9" />
           <entry key="py" value="137" />
@@ -53,7 +51,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSV" value="7" />
-          <entry key="IPNB" value="18" />
+          <entry key="IPNB" value="19" />
           <entry key="Image" value="9" />
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="28" />
@@ -116,8 +114,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scikit-learn/决策树/data/test.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="51" lean-forward="true" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+            <state relative-caret-position="255">
+              <caret line="15" column="81" lean-forward="true" selection-start-line="15" selection-start-column="81" selection-end-line="15" selection-end-column="81" />
             </state>
           </provider>
         </entry>
@@ -145,7 +143,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/chapter02/01-KNN预测约会.py" />
         <option value="$PROJECT_DIR$/chapter02/03-sklearn之手写识别.py" />
         <option value="$PROJECT_DIR$/chapter03/01-简单的计算信息熵.py" />
         <option value="$PROJECT_DIR$/chapter03/tree_plot.py" />
@@ -196,6 +193,7 @@
         <option value="$PROJECT_DIR$/python3.7-test/01-re模块.ipynb" />
         <option value="$PROJECT_DIR$/scikit-learn/决策树/01-决策树.ipynb" />
         <option value="$PROJECT_DIR$/scikit-learn/决策树/.ipynb_checkpoints/02-分类树在合成数据集上的表现.ipynb" />
+        <option value="$PROJECT_DIR$/scikit-learn/随机森林/01-决策树和随机森林对比.ipynb" />
       </list>
     </option>
   </component>
@@ -205,7 +203,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="1105" />
     <option name="y" value="250" />
     <option name="width" value="1455" />
@@ -235,20 +233,7 @@
               <item name="MachineLearningAction" type="b2602c69:ProjectViewProjectNode" />
               <item name="MachineLearningAction" type="462c0819:PsiDirectoryNode" />
               <item name="scikit-learn" type="462c0819:PsiDirectoryNode" />
-              <item name="svm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MachineLearningAction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MachineLearningAction" type="462c0819:PsiDirectoryNode" />
-              <item name="scikit-learn" type="462c0819:PsiDirectoryNode" />
-              <item name="决策树" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MachineLearningAction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MachineLearningAction" type="462c0819:PsiDirectoryNode" />
-              <item name="scikit-learn" type="462c0819:PsiDirectoryNode" />
-              <item name="决策树" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="随机森林" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MachineLearningAction" type="b2602c69:ProjectViewProjectNode" />
@@ -336,9 +321,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1105" y="250" width="1455" height="1000" extended-state="1" />
+    <frame x="1105" y="250" width="1455" height="1000" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31847134" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31847134" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -352,7 +338,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.37444934" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.37444934" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32929516" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -369,7 +355,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/chapter06/svmFullKernel.py" />
     <entry file="file://$PROJECT_DIR$/chapter07/data/horseColicTest2.txt" />
     <entry file="file://$PROJECT_DIR$/chapter06/05-手写识别demo.py" />
     <entry file="file://$PROJECT_DIR$/chapter06/03-完整版的SMO算法.py" />
@@ -567,10 +552,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scikit-learn/随机森林/01-决策树和随机森林对比.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scikit-learn/决策树/data/test.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="51" lean-forward="true" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+        <state relative-caret-position="255">
+          <caret line="15" column="81" lean-forward="true" selection-start-line="15" selection-start-column="81" selection-end-line="15" selection-end-column="81" />
         </state>
       </provider>
       <provider editor-type-id="csv-text-editor">
