@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b598224-62ab-4455-9130-d594899af009" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/python3.7-test/01-re模块.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scikit-learn/svm/10-预测明天是否会下雨.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scikit-learn/svm/data/Cityclimate.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scikit-learn/svm/data/cityll.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scikit-learn/svm/data/samplecity.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scikit-learn/svm/data/weatherAUS.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scikit-learn/决策树/01-决策树.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scikit-learn/决策树/data/data.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scikit-learn/决策树/data/test.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scikit-learn/决策树/02-分类树在合成数据集上的表现.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scikit-learn/svm/09-roc曲线相关问题.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/scikit-learn/svm/09-roc曲线相关问题.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scikit-learn/决策树/01-决策树.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/scikit-learn/决策树/01-决策树.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +19,7 @@
     <session id="251643585">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="17" />
+          <entry key="project.closed" value="18" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.21" value="1" />
@@ -41,16 +33,17 @@
           <entry key="project.open.time.41" value="1" />
           <entry key="project.open.time.42" value="1" />
           <entry key="project.open.time.45" value="1" />
+          <entry key="project.open.time.68" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.91" value="1" />
-          <entry key="project.opened" value="18" />
+          <entry key="project.opened" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="csv" value="6" />
+          <entry key="csv" value="7" />
           <entry key="gitignore" value="2" />
-          <entry key="ipynb" value="17" />
+          <entry key="ipynb" value="18" />
           <entry key="md" value="2" />
           <entry key="png" value="9" />
           <entry key="py" value="137" />
@@ -59,8 +52,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSV" value="6" />
-          <entry key="IPNB" value="17" />
+          <entry key="CSV" value="7" />
+          <entry key="IPNB" value="18" />
           <entry key="Image" value="9" />
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="28" />
@@ -115,14 +108,18 @@
         <entry file="file://$PROJECT_DIR$/scikit-learn/svm/data/cityll.csv">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="15" column="36" lean-forward="true" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+              <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scikit-learn/决策树/data/test.csv">
-          <provider selected="true" editor-type-id="csv-text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="51" lean-forward="true" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -148,7 +145,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/chapter02/KNN.py" />
         <option value="$PROJECT_DIR$/chapter02/01-KNN预测约会.py" />
         <option value="$PROJECT_DIR$/chapter02/03-sklearn之手写识别.py" />
         <option value="$PROJECT_DIR$/chapter03/01-简单的计算信息熵.py" />
@@ -199,6 +195,7 @@
         <option value="$PROJECT_DIR$/scikit-learn/svm/10-预测明天是否会下雨.ipynb" />
         <option value="$PROJECT_DIR$/python3.7-test/01-re模块.ipynb" />
         <option value="$PROJECT_DIR$/scikit-learn/决策树/01-决策树.ipynb" />
+        <option value="$PROJECT_DIR$/scikit-learn/决策树/.ipynb_checkpoints/02-分类树在合成数据集上的表现.ipynb" />
       </list>
     </option>
   </component>
@@ -208,8 +205,8 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1144" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="1105" />
     <option name="y" value="250" />
     <option name="width" value="1455" />
     <option name="height" value="1000" />
@@ -233,6 +230,12 @@
               <item name="MachineLearningAction" type="b2602c69:ProjectViewProjectNode" />
               <item name="MachineLearningAction" type="462c0819:PsiDirectoryNode" />
               <item name="scikit-learn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MachineLearningAction" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MachineLearningAction" type="462c0819:PsiDirectoryNode" />
+              <item name="scikit-learn" type="462c0819:PsiDirectoryNode" />
+              <item name="svm" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MachineLearningAction" type="b2602c69:ProjectViewProjectNode" />
@@ -265,16 +268,17 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scikit-learn/决策树" />
+      <recent name="$PROJECT_DIR$/scikit-learn" />
+      <recent name="$PROJECT_DIR$/scikit-learn/svm/data" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/scikit-learn/决策树/data" />
       <recent name="$PROJECT_DIR$/scikit-learn/svm/data" />
       <recent name="$PROJECT_DIR$/chapter07/data" />
       <recent name="$PROJECT_DIR$/chapter06/data" />
       <recent name="$PROJECT_DIR$/chapter05/data" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/scikit-learn" />
-      <recent name="$PROJECT_DIR$/scikit-learn/svm/data" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -332,9 +336,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1144" y="250" width="1455" height="1000" extended-state="0" />
+    <frame x="1105" y="250" width="1455" height="1000" extended-state="1" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31422505" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31847134" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -365,8 +369,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/chapter06/04-完整版的SMO算法Kernel版.py" />
-    <entry file="file://$PROJECT_DIR$/get-pip.py" />
     <entry file="file://$PROJECT_DIR$/chapter06/svmFullKernel.py" />
     <entry file="file://$PROJECT_DIR$/chapter07/data/horseColicTest2.txt" />
     <entry file="file://$PROJECT_DIR$/chapter06/05-手写识别demo.py" />
@@ -486,6 +488,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scikit-learn/svm/data/samplecity.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scikit-learn/svm/data/Cityclimate.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="csv-text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="39" lean-forward="true" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scikit-learn/svm/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1292">
+          <caret line="79" column="14" selection-start-line="17" selection-end-line="79" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scikit-learn/svm/01-绘制线性决策边界.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python3.7-test/01-re模块.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scikit-learn/决策树/01-决策树.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scikit-learn/svm/02-绘制线性决策边界整理后版本.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
@@ -506,61 +544,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scikit-learn/svm/data/samplecity.csv">
-      <provider editor-type-id="csv-text-editor" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scikit-learn/svm/data/Cityclimate.csv">
-      <provider editor-type-id="csv-text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="39" lean-forward="true" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scikit-learn/svm/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="79" column="14" selection-start-line="17" selection-end-line="79" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scikit-learn/svm/01-绘制线性决策边界.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python3.7-test/01-re模块.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scikit-learn/决策树/01-决策树.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scikit-learn/svm/data/cityll.csv">
-      <provider editor-type-id="csv-text-editor" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="15" column="36" lean-forward="true" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scikit-learn/决策树/data/data.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="89" lean-forward="true" selection-start-line="9" selection-start-column="89" selection-end-line="9" selection-end-column="89" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scikit-learn/决策树/02-分类树在合成数据集上的表现.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scikit-learn/决策树/data/test.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="51" lean-forward="true" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="61" lean-forward="true" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
