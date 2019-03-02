@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b598224-62ab-4455-9130-d594899af009" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/scikit-learn/随机森林/02-使用随机森林回归填充缺失值.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scikit-learn/随机森林/03-调参.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scikit-learn/数据预处理和特征工程/01-数据预处理.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scikit-learn/数据预处理和特征工程/02-特征选择.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scikit-learn/数据预处理和特征工程/04-包装法选择特征.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scikit-learn/数据预处理和特征工程/data/Narrativedata.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scikit-learn/数据预处理和特征工程/data/digit recognizor.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scikit-learn/随机森林/01-决策树和随机森林对比.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/scikit-learn/随机森林/01-决策树和随机森林对比.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +22,9 @@
     <session id="251643585">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="19" />
-          <entry key="project.open.time.18" value="1" />
+          <entry key="project.closed" value="22" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.18" value="2" />
           <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.23" value="2" />
@@ -32,20 +35,20 @@
           <entry key="project.open.time.39" value="1" />
           <entry key="project.open.time.40" value="1" />
           <entry key="project.open.time.41" value="1" />
-          <entry key="project.open.time.42" value="1" />
+          <entry key="project.open.time.42" value="2" />
           <entry key="project.open.time.45" value="1" />
           <entry key="project.open.time.68" value="1" />
           <entry key="project.open.time.72" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.91" value="1" />
-          <entry key="project.opened" value="20" />
+          <entry key="project.opened" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="csv" value="7" />
+          <entry key="csv" value="8" />
           <entry key="gitignore" value="2" />
-          <entry key="ipynb" value="21" />
+          <entry key="ipynb" value="25" />
           <entry key="md" value="2" />
           <entry key="png" value="9" />
           <entry key="py" value="138" />
@@ -54,8 +57,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSV" value="7" />
-          <entry key="IPNB" value="21" />
+          <entry key="CSV" value="8" />
+          <entry key="IPNB" value="25" />
           <entry key="Image" value="9" />
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="28" />
@@ -118,8 +121,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scikit-learn/决策树/data/test.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+            <state relative-caret-position="272">
+              <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -147,10 +150,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/chapter03/treePlot.py" />
-        <option value="$PROJECT_DIR$/chapter03/02-绘制决策树.py" />
-        <option value="$PROJECT_DIR$/chapter03/tree.py" />
-        <option value="$PROJECT_DIR$/chapter03/03-存储决策树.py" />
         <option value="$PROJECT_DIR$/chapter04/01-基于伯努利的贝叶斯.py" />
         <option value="$PROJECT_DIR$/chapter04/bayes.py" />
         <option value="$PROJECT_DIR$/chapter04/使用朴素贝叶斯从个人广告中获取区域倾向.py" />
@@ -198,6 +197,10 @@
         <option value="$PROJECT_DIR$/scikit-learn/随机森林/02-使用随机森林回归填充缺失值.ipynb" />
         <option value="$PROJECT_DIR$/scikit-learn/随机森林/03-调参.py" />
         <option value="$PROJECT_DIR$/scikit-learn/随机森林/03-调参.ipynb" />
+        <option value="$PROJECT_DIR$/scikit-learn/数据预处理和特征工程/01-数据预处理.ipynb" />
+        <option value="$PROJECT_DIR$/scikit-learn/数据预处理和特征工程/02-特征选择.ipynb" />
+        <option value="$PROJECT_DIR$/scikit-learn/数据预处理和特征工程/02-嵌入法选择特征.ipynb" />
+        <option value="$PROJECT_DIR$/scikit-learn/数据预处理和特征工程/04-包装法选择特征.ipynb" />
       </list>
     </option>
   </component>
@@ -207,9 +210,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="1105" />
-    <option name="y" value="250" />
+    <option name="y" value="249" />
     <option name="width" value="1455" />
     <option name="height" value="1000" />
   </component>
@@ -237,7 +240,14 @@
               <item name="MachineLearningAction" type="b2602c69:ProjectViewProjectNode" />
               <item name="MachineLearningAction" type="462c0819:PsiDirectoryNode" />
               <item name="scikit-learn" type="462c0819:PsiDirectoryNode" />
-              <item name="随机森林" type="462c0819:PsiDirectoryNode" />
+              <item name="数据预处理和特征工程" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MachineLearningAction" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MachineLearningAction" type="462c0819:PsiDirectoryNode" />
+              <item name="scikit-learn" type="462c0819:PsiDirectoryNode" />
+              <item name="数据预处理和特征工程" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MachineLearningAction" type="b2602c69:ProjectViewProjectNode" />
@@ -257,17 +267,17 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/scikit-learn/决策树" />
-      <recent name="$PROJECT_DIR$/scikit-learn" />
-      <recent name="$PROJECT_DIR$/scikit-learn/svm/data" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scikit-learn/数据预处理和特征工程/data" />
       <recent name="$PROJECT_DIR$/scikit-learn/决策树/data" />
       <recent name="$PROJECT_DIR$/scikit-learn/svm/data" />
       <recent name="$PROJECT_DIR$/chapter07/data" />
       <recent name="$PROJECT_DIR$/chapter06/data" />
-      <recent name="$PROJECT_DIR$/chapter05/data" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scikit-learn/决策树" />
+      <recent name="$PROJECT_DIR$/scikit-learn" />
+      <recent name="$PROJECT_DIR$/scikit-learn/svm/data" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -325,10 +335,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1105" y="250" width="1455" height="1000" extended-state="1" />
+    <frame x="1105" y="249" width="1455" height="1000" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32271764" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.33545646" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -342,7 +352,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.37444934" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.37444934" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32929516" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -359,11 +369,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/chapter02/01-KNN预测约会.py" />
-    <entry file="file://$PROJECT_DIR$/chapter06/01-数据可视化.py" />
-    <entry file="file://$PROJECT_DIR$/chapter04/bayes.py" />
-    <entry file="file://$PROJECT_DIR$/chapter05/logRegres.py" />
-    <entry file="file://$PROJECT_DIR$/chapter05/03-从疝气预测病马死亡率.py" />
     <entry file="file://$PROJECT_DIR$/chapter07/03-测试算法.py" />
     <entry file="file://$PROJECT_DIR$/chapter07/data/Taitanic_data/data.csv" />
     <entry file="file://$PROJECT_DIR$/chapter07/05-利用adaBoost预测马疝病.py" />
@@ -532,6 +537,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scikit-learn/随机森林/02-使用随机森林回归填充缺失值.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scikit-learn/随机森林/03-调参.py" />
+    <entry file="file://$PROJECT_DIR$/scikit-learn/随机森林/03-调参.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scikit-learn/数据预处理和特征工程/01-数据预处理.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scikit-learn/数据预处理和特征工程/02-特征选择.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scikit-learn/svm/02-绘制线性决策边界整理后版本.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
@@ -560,17 +594,22 @@
       </provider>
       <provider editor-type-id="csv-text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/scikit-learn/随机森林/02-使用随机森林回归填充缺失值.ipynb">
+    <entry file="file://$PROJECT_DIR$/scikit-learn/数据预处理和特征工程/02-嵌入法选择特征.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
           <selected id="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scikit-learn/随机森林/03-调参.py">
+    <entry file="file://$PROJECT_DIR$/scikit-learn/数据预处理和特征工程/data/Narrativedata.csv">
       <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="csv-text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scikit-learn/随机森林/03-调参.ipynb">
+    <entry file="file://$PROJECT_DIR$/scikit-learn/数据预处理和特征工程/04-包装法选择特征.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
           <selected id="0" />
@@ -579,8 +618,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scikit-learn/决策树/data/test.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+        <state relative-caret-position="272">
+          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
         </state>
       </provider>
       <provider editor-type-id="csv-text-editor">
