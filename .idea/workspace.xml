@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b598224-62ab-4455-9130-d594899af009" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/scikit-learn/PCA和SVD/02-pca之demo.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scikit-learn/PCA和SVD/data/digit recognizor.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaggle/Titanic/01-exploreTitanic.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaggle/Titanic/02-exporeTitannic.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaggle/Titanic/data/gender_submission.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaggle/Titanic/data/test.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaggle/Titanic/data/train.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scikit-learn/PCA和SVD/01-高维数据可视化.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/scikit-learn/PCA和SVD/01-高维数据可视化.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +22,7 @@
     <session id="251643585">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="24" />
+          <entry key="project.closed" value="25" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.18" value="2" />
           <entry key="project.open.time.20" value="1" />
@@ -36,18 +38,19 @@
           <entry key="project.open.time.41" value="1" />
           <entry key="project.open.time.42" value="2" />
           <entry key="project.open.time.45" value="2" />
+          <entry key="project.open.time.48" value="1" />
           <entry key="project.open.time.68" value="1" />
           <entry key="project.open.time.72" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.91" value="1" />
-          <entry key="project.opened" value="25" />
+          <entry key="project.opened" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="csv" value="10" />
+          <entry key="csv" value="12" />
           <entry key="gitignore" value="2" />
-          <entry key="ipynb" value="27" />
+          <entry key="ipynb" value="30" />
           <entry key="md" value="2" />
           <entry key="png" value="9" />
           <entry key="py" value="138" />
@@ -56,8 +59,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSV" value="10" />
-          <entry key="IPNB" value="27" />
+          <entry key="CSV" value="12" />
+          <entry key="IPNB" value="30" />
           <entry key="Image" value="9" />
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="28" />
@@ -85,30 +88,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scikit-learn/svm/02-绘制线性决策边界整理后版本.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scikit-learn/svm/03-非线性绘制决策边界.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scikit-learn/svm/data/cityll.csv">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
@@ -117,11 +96,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scikit-learn/决策树/data/test.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="53" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
+            <state relative-caret-position="306">
+              <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/kaggle/Titanic/data/gender_submission.csv">
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/kaggle/Titanic/data/train.csv">
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="51" lean-forward="true" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -149,8 +146,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/chapter04/02-使用朴素贝叶斯过滤垃圾邮件.py" />
-        <option value="$PROJECT_DIR$/chapter04/03-使用朴素贝叶斯从个人广告中获取区域倾向.py" />
         <option value="$PROJECT_DIR$/chapter05/01-使用梯度上升算法找最佳参数.py" />
         <option value="$PROJECT_DIR$/chapter05/02-随机梯度上升算法.py" />
         <option value="$PROJECT_DIR$/chapter02/02-KNN之手写识别系统.py" />
@@ -200,6 +195,8 @@
         <option value="$PROJECT_DIR$/scikit-learn/数据预处理和特征工程/05-其他方法的测试.ipynb" />
         <option value="$PROJECT_DIR$/scikit-learn/PCA和SVD/01-高维数据可视化.ipynb" />
         <option value="$PROJECT_DIR$/scikit-learn/PCA和SVD/02-pca之demo.ipynb" />
+        <option value="$PROJECT_DIR$/kaggle/Titanic/01-exploreTitanic.ipynb" />
+        <option value="$PROJECT_DIR$/kaggle/Titanic/02-exporeTitannic.ipynb" />
       </list>
     </option>
   </component>
@@ -210,8 +207,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1105" />
-    <option name="y" value="249" />
+    <option name="x" value="1145" />
+    <option name="y" value="634" />
     <option name="width" value="1455" />
     <option name="height" value="1000" />
   </component>
@@ -223,6 +220,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -233,33 +231,24 @@
             <path>
               <item name="MachineLearningAction" type="b2602c69:ProjectViewProjectNode" />
               <item name="MachineLearningAction" type="462c0819:PsiDirectoryNode" />
+              <item name="kaggle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MachineLearningAction" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MachineLearningAction" type="462c0819:PsiDirectoryNode" />
+              <item name="kaggle" type="462c0819:PsiDirectoryNode" />
+              <item name="Titanic" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MachineLearningAction" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MachineLearningAction" type="462c0819:PsiDirectoryNode" />
               <item name="scikit-learn" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MachineLearningAction" type="b2602c69:ProjectViewProjectNode" />
               <item name="MachineLearningAction" type="462c0819:PsiDirectoryNode" />
               <item name="scikit-learn" type="462c0819:PsiDirectoryNode" />
-              <item name="PCA和SVD" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MachineLearningAction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MachineLearningAction" type="462c0819:PsiDirectoryNode" />
-              <item name="scikit-learn" type="462c0819:PsiDirectoryNode" />
-              <item name="PCA和SVD" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MachineLearningAction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MachineLearningAction" type="462c0819:PsiDirectoryNode" />
-              <item name="scikit-learn" type="462c0819:PsiDirectoryNode" />
-              <item name="数据预处理和特征工程" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MachineLearningAction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MachineLearningAction" type="462c0819:PsiDirectoryNode" />
-              <item name="scikit-learn" type="462c0819:PsiDirectoryNode" />
-              <item name="数据预处理和特征工程" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="决策树" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MachineLearningAction" type="b2602c69:ProjectViewProjectNode" />
@@ -269,7 +258,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -280,11 +268,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/kaggle/Titanic/data" />
+      <recent name="$PROJECT_DIR$/scikit-learn/PCA和SVD/data" />
       <recent name="$PROJECT_DIR$/scikit-learn/数据预处理和特征工程/data" />
       <recent name="$PROJECT_DIR$/scikit-learn/决策树/data" />
       <recent name="$PROJECT_DIR$/scikit-learn/svm/data" />
-      <recent name="$PROJECT_DIR$/chapter07/data" />
-      <recent name="$PROJECT_DIR$/chapter06/data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/scikit-learn/决策树" />
@@ -347,10 +335,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1105" y="249" width="1455" height="1000" extended-state="0" />
-    <editor active="true" />
+    <frame x="1145" y="634" width="1455" height="1000" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.34536448" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.35031846" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -381,10 +368,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/chapter07/01-构建单层决策树.py" />
-    <entry file="file://$PROJECT_DIR$/chapter07/02-完整adaBoost算法实现.py" />
-    <entry file="file://$PROJECT_DIR$/chapter07/adaboost.py" />
-    <entry file="file://$PROJECT_DIR$/chapter06/02-简化版的SMO算法.py" />
     <entry file="file://$PROJECT_DIR$/chapter07/06-adaBoost预测泰坦尼克号幸存者.py" />
     <entry file="file://$PROJECT_DIR$/机器学习实战/chapter05/02-随机梯度上升算法.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -488,16 +471,16 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scikit-learn/svm/data/samplecity.csv">
-      <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="csv-text-editor" />
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/scikit-learn/svm/data/Cityclimate.csv">
-      <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="csv-text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="39" lean-forward="true" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/scikit-learn/svm/test.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -524,17 +507,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scikit-learn/决策树/data/data.csv">
+      <provider editor-type-id="csv-text-editor" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="89" lean-forward="true" selection-start-line="9" selection-start-column="89" selection-end-line="9" selection-end-column="89" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scikit-learn/决策树/02-分类树在合成数据集上的表现.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
         </state>
       </provider>
     </entry>
@@ -576,12 +552,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scikit-learn/数据预处理和特征工程/02-嵌入法选择特征.ipynb" />
     <entry file="file://$PROJECT_DIR$/scikit-learn/数据预处理和特征工程/data/Narrativedata.csv">
-      <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="csv-text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/scikit-learn/数据预处理和特征工程/04-包装法选择特征.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
@@ -604,9 +580,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scikit-learn/PCA和SVD/02-pca之demo.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scikit-learn/PCA和SVD/data/digit recognizor.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/scikit-learn/svm/02-绘制线性决策边界整理后版本.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="646">
           <caret line="41" selection-start-line="41" selection-end-line="41" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
@@ -625,32 +611,57 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scikit-learn/svm/data/cityll.csv">
+      <provider editor-type-id="csv-text-editor" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
         </state>
       </provider>
-      <provider editor-type-id="csv-text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/scikit-learn/PCA和SVD/02-pca之demo.ipynb">
+    <entry file="file://$PROJECT_DIR$/scikit-learn/决策树/data/test.csv">
+      <provider editor-type-id="csv-text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="61" lean-forward="true" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaggle/Titanic/data/gender_submission.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaggle/Titanic/01-exploreTitanic.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
           <selected id="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scikit-learn/PCA和SVD/data/digit recognizor.csv">
-      <provider selected="true" editor-type-id="LargeFileEditor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scikit-learn/决策树/data/test.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="53" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
+    <entry file="file://$PROJECT_DIR$/scikit-learn/决策树/02-分类树在合成数据集上的表现.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
         </state>
       </provider>
-      <provider editor-type-id="csv-text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="61" lean-forward="true" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaggle/Titanic/02-exporeTitannic.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaggle/Titanic/data/train.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="51" lean-forward="true" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
         </state>
       </provider>
     </entry>
