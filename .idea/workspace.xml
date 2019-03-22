@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b598224-62ab-4455-9130-d594899af009" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/scikit-learn/线性回归/01-线性回归.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scikit-learn/朴素贝叶斯/01-test.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scikit-learn/朴素贝叶斯/01-高斯朴素贝叶斯.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scikit-learn/朴素贝叶斯/02-探索高斯朴素贝叶斯擅长的数据集.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scikit-learn/朴素贝叶斯/03-探索高斯朴素贝叶斯的拟合效果和运算速度.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scikit-learn/朴素贝叶斯/05-调节概率校准度.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scikit-learn/朴素贝叶斯/06-多项式朴素贝叶斯.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scikit-learn/线性回归/01-线性回归.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/scikit-learn/线性回归/01-岭回归.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,7 +24,7 @@
     <session id="251643585">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="33" />
+          <entry key="project.closed" value="35" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.18" value="2" />
           <entry key="project.open.time.19" value="1" />
@@ -28,8 +34,9 @@
           <entry key="project.open.time.23" value="4" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.25" value="2" />
+          <entry key="project.open.time.27" value="1" />
           <entry key="project.open.time.29" value="1" />
-          <entry key="project.open.time.30" value="1" />
+          <entry key="project.open.time.30" value="2" />
           <entry key="project.open.time.32" value="2" />
           <entry key="project.open.time.33" value="1" />
           <entry key="project.open.time.38" value="1" />
@@ -44,14 +51,14 @@
           <entry key="project.open.time.72" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.91" value="1" />
-          <entry key="project.opened" value="34" />
+          <entry key="project.opened" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="csv" value="17" />
           <entry key="gitignore" value="2" />
-          <entry key="ipynb" value="39" />
+          <entry key="ipynb" value="47" />
           <entry key="md" value="2" />
           <entry key="png" value="9" />
           <entry key="py" value="140" />
@@ -61,7 +68,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSV" value="17" />
-          <entry key="IPNB" value="39" />
+          <entry key="IPNB" value="47" />
           <entry key="Image" value="9" />
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="28" />
@@ -87,7 +94,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -110,13 +117,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/chapter06/svmFull.py" />
-        <option value="$PROJECT_DIR$/chapter06/03-完整版的SMO算法.py" />
-        <option value="$PROJECT_DIR$/chapter06/04-完整版的SMO算法Kernel版.py" />
-        <option value="$PROJECT_DIR$/chapter06/svmFullKernel.py" />
-        <option value="$PROJECT_DIR$/chapter06/05-手写识别demo.py" />
-        <option value="$PROJECT_DIR$/chapter07/adaboost.py" />
-        <option value="$PROJECT_DIR$/chapter07/01-构建单层决策树.py" />
         <option value="$PROJECT_DIR$/chapter07/02-完整adaBoost算法实现.py" />
         <option value="$PROJECT_DIR$/chapter07/03-测试算法.py" />
         <option value="$PROJECT_DIR$/chapter07/05-利用adaBoost预测马疝病.py" />
@@ -161,6 +161,13 @@
         <option value="$PROJECT_DIR$/other/Interview/01-杨辉三角.py" />
         <option value="$PROJECT_DIR$/other/Interview/01-杨辉三角.ipynb" />
         <option value="$PROJECT_DIR$/scikit-learn/线性回归/01-线性回归.ipynb" />
+        <option value="$PROJECT_DIR$/scikit-learn/线性回归/02-lasso.ipynb" />
+        <option value="$PROJECT_DIR$/scikit-learn/朴素贝叶斯/01-test.ipynb" />
+        <option value="$PROJECT_DIR$/scikit-learn/朴素贝叶斯/02-探索高斯朴素贝叶斯擅长的数据集.ipynb" />
+        <option value="$PROJECT_DIR$/scikit-learn/朴素贝叶斯/03-探索高斯朴素贝叶斯的拟合效果和运算速度.ipynb" />
+        <option value="$PROJECT_DIR$/scikit-learn/朴素贝叶斯/04-模型的评估指标.ipynb" />
+        <option value="$PROJECT_DIR$/scikit-learn/朴素贝叶斯/05-调节概率校准度.ipynb" />
+        <option value="$PROJECT_DIR$/scikit-learn/朴素贝叶斯/06-多项式朴素贝叶斯.ipynb" />
       </list>
     </option>
   </component>
@@ -171,8 +178,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1105" />
-    <option name="y" value="356" />
+    <option name="x" value="1096" />
+    <option name="y" value="246" />
     <option name="width" value="1455" />
     <option name="height" value="1000" />
   </component>
@@ -184,6 +191,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -200,6 +208,12 @@
               <item name="MachineLearningAction" type="b2602c69:ProjectViewProjectNode" />
               <item name="MachineLearningAction" type="462c0819:PsiDirectoryNode" />
               <item name="scikit-learn" type="462c0819:PsiDirectoryNode" />
+              <item name="朴素贝叶斯" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MachineLearningAction" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MachineLearningAction" type="462c0819:PsiDirectoryNode" />
+              <item name="scikit-learn" type="462c0819:PsiDirectoryNode" />
               <item name="线性回归" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -210,7 +224,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -288,9 +301,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1105" y="356" width="1455" height="1000" extended-state="0" />
+    <frame x="1096" y="246" width="1455" height="1000" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.39065817" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.4019816" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -321,35 +334,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scikit-learn/jupyter快捷键01.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scikit-learn/jupyter快捷键02.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scikit-learn/svm/08-样本不均衡问题.ipynb" />
-    <entry file="file://$PROJECT_DIR$/scikit-learn/svm/09-svc模型的评估指标:混淆矩阵.ipynb" />
-    <entry file="file://$PROJECT_DIR$/scikit-learn/svm/09-roc曲线相关问题.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scikit-learn/svm/08-样本不均衡问题及混淆矩阵.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scikit-learn/svm/10-预测明天是否会下雨.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scikit-learn/svm/data/samplecity.csv">
       <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="csv-text-editor" />
@@ -623,7 +607,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scikit-learn/线性回归/01-线性回归.ipynb">
+    <entry file="file://$PROJECT_DIR$/scikit-learn/线性回归/01-线性回归.ipynb" />
+    <entry file="file://$PROJECT_DIR$/scikit-learn/线性回归/02-lasso.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scikit-learn/朴素贝叶斯/01-test.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scikit-learn/朴素贝叶斯/02-探索高斯朴素贝叶斯擅长的数据集.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scikit-learn/朴素贝叶斯/04-模型的评估指标.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scikit-learn/朴素贝叶斯/03-探索高斯朴素贝叶斯的拟合效果和运算速度.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scikit-learn/朴素贝叶斯/05-调节概率校准度.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scikit-learn/朴素贝叶斯/06-多项式朴素贝叶斯.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
           <selected id="0" />
