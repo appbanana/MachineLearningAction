@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b598224-62ab-4455-9130-d594899af009" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/scikit-learn/朴素贝叶斯/01-test.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scikit-learn/朴素贝叶斯/01-高斯朴素贝叶斯.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scikit-learn/朴素贝叶斯/02-探索高斯朴素贝叶斯擅长的数据集.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scikit-learn/朴素贝叶斯/03-探索高斯朴素贝叶斯的拟合效果和运算速度.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scikit-learn/朴素贝叶斯/05-调节概率校准度.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scikit-learn/朴素贝叶斯/06-多项式朴素贝叶斯.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scikit-learn/线性回归/01-线性回归.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/scikit-learn/线性回归/01-岭回归.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scikit-learn/朴素贝叶斯/06-多项式朴素贝叶斯.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/scikit-learn/朴素贝叶斯/06-多项式朴素贝叶斯.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,7 +17,7 @@
     <session id="251643585">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="35" />
+          <entry key="project.closed" value="36" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.18" value="2" />
           <entry key="project.open.time.19" value="1" />
@@ -58,7 +51,7 @@
         <counts>
           <entry key="csv" value="17" />
           <entry key="gitignore" value="2" />
-          <entry key="ipynb" value="47" />
+          <entry key="ipynb" value="48" />
           <entry key="md" value="2" />
           <entry key="png" value="9" />
           <entry key="py" value="140" />
@@ -68,7 +61,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSV" value="17" />
-          <entry key="IPNB" value="47" />
+          <entry key="IPNB" value="48" />
           <entry key="Image" value="9" />
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="28" />
@@ -117,7 +110,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/chapter07/02-完整adaBoost算法实现.py" />
         <option value="$PROJECT_DIR$/chapter07/03-测试算法.py" />
         <option value="$PROJECT_DIR$/chapter07/05-利用adaBoost预测马疝病.py" />
         <option value="$PROJECT_DIR$/chapter07/06-adaBoost预测泰坦尼克号幸存者.py" />
@@ -168,6 +160,7 @@
         <option value="$PROJECT_DIR$/scikit-learn/朴素贝叶斯/04-模型的评估指标.ipynb" />
         <option value="$PROJECT_DIR$/scikit-learn/朴素贝叶斯/05-调节概率校准度.ipynb" />
         <option value="$PROJECT_DIR$/scikit-learn/朴素贝叶斯/06-多项式朴素贝叶斯.ipynb" />
+        <option value="$PROJECT_DIR$/scikit-learn/朴素贝叶斯/05-test.ipynb" />
       </list>
     </option>
   </component>
@@ -334,10 +327,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scikit-learn/svm/data/samplecity.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="csv-text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/scikit-learn/svm/data/Cityclimate.csv">
       <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="csv-text-editor">
@@ -651,6 +640,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scikit-learn/朴素贝叶斯/06-多项式朴素贝叶斯.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scikit-learn/朴素贝叶斯/05-test.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
           <selected id="0" />
