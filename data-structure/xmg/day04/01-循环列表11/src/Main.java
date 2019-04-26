@@ -1,5 +1,7 @@
 import com.jqc.Asserts;
 import com.jqc.List;
+import com.jqc.circle.SingleCircleLinkList;
+import com.jqc.CircleLinkList;
 
 
 public class Main {
@@ -29,16 +31,25 @@ public class Main {
         System.out.println(list);
     }
 
-    public static void main(String[] args) {
-        Stack<Integer> stack = new Stack<>();
-
+    static void josephus() {
+        CircleLinkList list = new CircleLinkList<>();
         for (int i = 0; i < 8; i++) {
-            stack.push(i);
+            list.add(i);
         }
-
-        while (!stack.isEmpty()){
-            System.out.println(stack.pop());
+        list.reset();
+        while (!list.isEmpty()){
+            list.next();
+            list.next();
+            System.out.println(list.remove());
         }
+    }
+    public static void main(String[] args) {
 
+        // 测试双链表
+//        testList(new LinkList<>());
+        // 测试循环单链表
+//        testList(new SingleCircleLinkList<>());
+//        testList(new CircleLinkList<>());
+            josephus();
     }
 }
