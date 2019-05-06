@@ -103,13 +103,33 @@ public class Main {
 //        });
 
         // 中序遍历
-        bst.inorder(new Visitor<Integer>() {
+//        bst.inorder(new Visitor<Integer>() {
+//            @Override
+//            public void visit(Integer element) {
+//                System.out.println(element);
+//            }
+//        });
+
+//        bst.inorder1(new Visitor<Integer>() {
+//            @Override
+//            public void visit(Integer element) {
+//                System.out.println(element);
+//            }
+//        });
+
+        // 后序遍历
+//        bst.postorder(new Visitor<Integer>() {
+//            @Override
+//            public void visit(Integer element) {
+//                System.out.println(element);
+//            }
+//        });
+        bst.postorder1(new Visitor<Integer>() {
             @Override
             public void visit(Integer element) {
                 System.out.println(element);
             }
         });
-
 
     }
     public static void main(String[] args) {

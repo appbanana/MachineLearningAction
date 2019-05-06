@@ -169,16 +169,56 @@ public class BinarySearchTree<E> implements BinaryTreeInfo{
     public void inorder1(Visitor<E> visitor) {
         Stack stack = new Stack<>();
         Node<E> node = root;
-        stack.push(node);
         while (node != null || !stack.isEmpty()){
-            if (node.left != null){
-                stack.push(node.left);
+            if (node != null){
+                stack.push(node);
                 node = node.left;
-            }
-            if (node.right != null){
-                
+
+            }else {
+                Node<E> temp = (Node<E>)stack.pop();
+                visitor.visit(temp.element);
+                node = temp.right;
             }
         }
+    }
+
+    /**
+     * 递归实现 后序遍历 左 右 根
+     */
+    public void postorder(Visitor<E> visitor) {
+        postorder(root, visitor);
+    }
+
+    private void postorder(Node<E> node, Visitor<E> visitor) {
+        if (node == null) return;
+        postorder(node.left, visitor);
+        postorder(node.right, visitor);
+        visitor.visit(node.element);
+    }
+
+    /**
+     * 迭代实现 后序遍历 左 右 根
+     */
+    public void postorder1(Visitor<E> visitor) {
+        Stack stack = new Stack<>();
+        Stack value_stack = new Stack<>();
+        Node<E> node = root;
+        stack.push(node);
+        while (!stack.isEmpty()){
+            Node<E> temp = (Node<E>)stack.pop();
+            value_stack.push(temp.element);
+            if (temp.left != null){
+                stack.push(temp.left);
+            }
+            if (temp.right != null){
+                stack.push(temp.right);
+            }
+        }
+
+        while (!value_stack.isEmpty()){
+            visitor.visit((E) value_stack.pop());
+        }
+
     }
 
     private void elementNotNullCheck(E element) {
