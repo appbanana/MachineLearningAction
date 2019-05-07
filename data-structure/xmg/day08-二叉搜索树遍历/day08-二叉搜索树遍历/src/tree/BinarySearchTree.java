@@ -34,6 +34,8 @@ public class BinarySearchTree<E> implements BinaryTreeInfo{
     }
 
     public void clear(){
+        root = null;
+        size = 0;
     }
 
     public void add(E element){
@@ -74,31 +76,68 @@ public class BinarySearchTree<E> implements BinaryTreeInfo{
 
     }
 
+    // 删除 其实删除的是他的前驱后继
     public void remove(E element) {
-
-    }
-
-    /**
-     * @return 返回值等于0，代表e1和e2相等；返回值大于0，代表e1大于e2；返回值小于于0，代表e1小于e2
-     */
-    private int compare(E e1, E e2) {
-        // 第一种方法：直接在里面写死比较逻辑
-//        return (Integer)e1 - (Integer)e2;
-
-        // 第二种使用接口，让传进来的模型去遵守这个协议，去实现这个协议
-//        return e1.compareTo(e2);
-
-        // 第三种方法改进 如果你传comparator 优先使用comparator 如果你没有传 使用自定义的Comparable
-        if (comparator != null){
-//            return comparator.compareTo(e1, e2);
-            return comparator.compare(e1, e2);
-        }
-        return ((Comparable<E>)e1).compareTo(e2);
+        remove(node(element));
     }
 
     public boolean contains(E element) {
-        return false;
+        return node(element) != null;
     }
+
+    // 真正的删除逻辑 使用前驱和后继都可以 这里使用后继进行替换要删除的节点
+    // 删除节点 有三种类型 删除度为2的几点，此时删除的是它的前驱后后继 他的前驱或者后继只能是度为0或者度为1的节点
+    // 删除度为1的节点 删除度为0的节点
+    public void remove(Node<E> node) {
+        if (node == null) return;
+        size--;
+        if (node.hasTwoChildren()){
+            Node<E> s = successor(node);
+            node.element = s.element;
+            // 赋值为node  node就是接下来要删除的节点
+            node = s;
+        }
+
+        // 接下来就是删除度为0或者为1的节点
+        Node<E> replacement = node.left != null ? node.left : node.right;
+        if (replacement == null){
+            // replacement 为空说明此时节点的度为0，这时是要删除度为0的节点
+            if (node == node.parent.left){
+                node.parent.left = null;
+            }else {
+                node.parent.right = null;
+            }
+        }else if (node.parent == null){
+            // 要删除度为1的节点 切为根节点
+            root = null;
+        }else {
+            // node的度为1 但不是根节点
+            replacement.parent = node.parent;
+            if (node.parent == null){
+                root = replacement;
+            }else if (node == node.parent.left){
+                node.parent.left = replacement;
+            }else {
+                node.parent.right = replacement;
+            }
+        }
+
+    }
+    private Node<E> node(E element){
+        Node<E> p = root;
+        while (p != null){
+            int cmp = compare(element, p.element);
+            if (cmp == 0) return p;
+            if (cmp > 0){
+                p = p.right;
+            }else if (cmp < 0){
+                p = p.left;
+            }
+        }
+        return null;
+    }
+
+
 
 //    /**
 //     * 前序遍历 根 左 右
@@ -328,6 +367,24 @@ public class BinarySearchTree<E> implements BinaryTreeInfo{
         if (element == null) {
             throw new IllegalArgumentException("element must not be null");
         }
+    }
+
+    /**
+     * @return 返回值等于0，代表e1和e2相等；返回值大于0，代表e1大于e2；返回值小于于0，代表e1小于e2
+     */
+    private int compare(E e1, E e2) {
+        // 第一种方法：直接在里面写死比较逻辑
+//        return (Integer)e1 - (Integer)e2;
+
+        // 第二种使用接口，让传进来的模型去遵守这个协议，去实现这个协议
+//        return e1.compareTo(e2);
+
+        // 第三种方法改进 如果你传comparator 优先使用comparator 如果你没有传 使用自定义的Comparable
+        if (comparator != null){
+//            return comparator.compareTo(e1, e2);
+            return comparator.compare(e1, e2);
+        }
+        return ((Comparable<E>)e1).compareTo(e2);
     }
 
     // 寻找当前节点的前驱 node.left.right.right...

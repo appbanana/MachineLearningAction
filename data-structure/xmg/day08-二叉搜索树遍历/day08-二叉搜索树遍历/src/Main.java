@@ -185,6 +185,26 @@ public class Main {
 
         System.out.println("***------***");
 
+    }
+
+    // 测试删除
+    static void test7() {
+        BinarySearchTree<Integer> bst = new BinarySearchTree<>();
+
+        Integer data[] = new Integer[] {
+                7, 4, 9, 2, 5, 8, 11, 3, 12, 1
+        };
+
+        for (int i = 0; i < data.length; i++) {
+            bst.add(data[i]);
+        }
+        BinaryTrees.println(bst);
+
+        System.out.println("***------***");
+        bst.remove(2);
+
+        BinaryTrees.println(bst);
+
 
     }
     public static void main(String[] args) {
@@ -194,7 +214,8 @@ public class Main {
 //        test3();
 //        test4();
 //        test5();
-        test6();
+//        test6();
+        test7();
     }
 
 }
