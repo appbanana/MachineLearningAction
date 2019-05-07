@@ -124,7 +124,16 @@ public class Main {
 //                System.out.println(element);
 //            }
 //        });
-        bst.postorder1(new Visitor<Integer>() {
+
+//        bst.postorder1(new Visitor<Integer>() {
+//            @Override
+//            public void visit(Integer element) {
+//                System.out.println(element);
+//            }
+//        });
+
+        // 层序遍历
+        bst.levelOrder(new Visitor<Integer>() {
             @Override
             public void visit(Integer element) {
                 System.out.println(element);
@@ -132,12 +141,60 @@ public class Main {
         });
 
     }
+
+    // 测试完全二叉树  高度
+    static void test5() {
+        BinarySearchTree<Integer> bst = new BinarySearchTree<>();
+		for (int i = 0; i < 6; i++) {
+			bst.add((int)(Math.random() * 100));
+		}
+//        Integer data[] = new Integer[] {
+//                7, 4, 9, 2, 5, 8, 11, 3, 12, 1
+//        };
+        Integer data[] = new Integer[] {
+                7, 4, 9, 2, 5, 8, 11, 3, 1
+        };
+        for (int i = 0; i < data.length; i++) {
+            bst.add(data[i]);
+        }
+        BinaryTrees.println(bst);
+
+        System.out.println("***------***");
+        System.out.println(bst.isComplete());
+        System.out.println(bst.height());
+        System.out.println(bst.height1());
+
+        System.out.println(bst.toString());
+
+    }
+
+    // 测试前驱 后继
+    static void test6() {
+        BinarySearchTree<Integer> bst = new BinarySearchTree<>();
+//        for (int i = 0; i < 6; i++) {
+//            bst.add((int)(Math.random() * 100));
+//        }
+        Integer data[] = new Integer[] {
+                7, 4, 9, 2, 5, 8, 11, 3, 12, 1
+        };
+
+        for (int i = 0; i < data.length; i++) {
+            bst.add(data[i]);
+        }
+        BinaryTrees.println(bst);
+
+        System.out.println("***------***");
+
+
+    }
     public static void main(String[] args) {
         System.out.println("Hello World!");
 //        test1();
 //        test2();
 //        test3();
-        test4();
-
+//        test4();
+//        test5();
+        test6();
     }
+
 }

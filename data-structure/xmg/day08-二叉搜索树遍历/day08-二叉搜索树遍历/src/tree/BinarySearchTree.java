@@ -6,7 +6,9 @@ package tree;
 
 import printer.BinaryTreeInfo;
 import java.util.Comparator;
+import java.util.LinkedList;
 import java.util.Stack;
+import java.util.Queue;
 
 public class BinarySearchTree<E> implements BinaryTreeInfo{
 
@@ -220,6 +222,107 @@ public class BinarySearchTree<E> implements BinaryTreeInfo{
         }
 
     }
+    /**
+     * 迭代实现 层序遍历 第一层->第二层->第三层...
+     */
+    public void levelOrder(Visitor<E> visitor) {
+        if (root == null || visitor == null) return;
+
+        Queue<Node<E>> queue = new LinkedList<>();
+        queue.offer(root);
+        while (!queue.isEmpty()){
+            Node<E> temp = (Node<E>)queue.poll();
+            visitor.visit(temp.element);
+            if (temp.left != null){
+                queue.offer(temp.left);
+
+            }
+            if (temp.right != null){
+                queue.offer(temp.right);
+            }
+        }
+
+    }
+    /**
+     * 判断是否是完全二叉树
+     */
+    public boolean isComplete() {
+        if (root == null) return false;
+        Queue<Node<E>> queue = new LinkedList<>();
+        queue.offer(root);
+        // 用来标记叶子节点
+        boolean leaf = false;
+        while (!queue.isEmpty()){
+            Node<E> node = queue.poll();
+
+            if (leaf && !node.isLeaf()) return false;
+            // 度为2的节点
+            if (node.hasTwoChildren()){
+                queue.offer(node.left);
+                queue.offer(node.right);
+            }else if (node.left == null && node.right != null){
+                return false;
+            }else {
+                // 剩下的应该全是叶子节点
+                leaf = true;
+            }
+        }
+        return true;
+    }
+
+    /**
+     * 迭代来实现 返回树的高度
+     */
+    public int height() {
+        if (root == null) return 0;
+        Queue<Node<E>> queue = new LinkedList<>();
+        queue.offer(root);
+        int levelSize = 1;
+        int height = 0;
+        // 用来标记叶子节点
+        while (!queue.isEmpty()){
+            Node<E> node = queue.poll();
+            levelSize--;
+            if (node.left != null){
+                queue.offer(node.left);
+            }
+            if (node.right != null){
+                queue.offer(node.right);
+            }
+            if (levelSize == 0){
+                levelSize = queue.size();
+                height += 1;
+            }
+        }
+        return height;
+    }
+
+    /**
+     * 递归来实现 返回树的高度
+     */
+    public int height1() {
+        return height(root);
+    }
+
+    public int height(Node<E> node) {
+        if (node == null) return 0;
+        return 1 + Math.max(height(node.left), height(node.right));
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        toString(root, sb, "");
+        return super.toString();
+    }
+
+    private void toString(Node<E> node, StringBuilder sb, String prefix) {
+        if (node == null) return;
+        toString(node.left, sb, prefix + "L--");
+        sb.append(prefix).append(node.element).append("\n");
+        toString(node.right, sb, prefix + "R--");
+
+    }
 
     private void elementNotNullCheck(E element) {
         if (element == null) {
@@ -227,7 +330,47 @@ public class BinarySearchTree<E> implements BinaryTreeInfo{
         }
     }
 
-    // 相当于block
+    // 寻找当前节点的前驱 node.left.right.right...
+    private Node<E> predecessor(Node<E> node) {
+        if (node == null) return null;
+        Node<E> p = node.left;
+        // 这个可以看做在左子树中找前驱
+        if (p != null){
+            while (p.right != null){
+                p = p.right;
+            }
+            return p;
+        }
+        //  左子树为空  这时返回的是当前节点的父节点 
+        while (node.parent != null && node == node.parent.left){
+            node = node.parent;
+        }
+
+        // 当只有root节点时，node.parent == null
+        return node.parent;
+    }
+
+    // 寻找当前节点的后继 node.right.left.left...
+    private Node<E> successor(Node<E> node) {
+        if (node == null) return null;
+        Node<E> p = node.right;
+        // 这个可以看做在右子树中找后继
+        if (p != null){
+            while (p.left != null){
+                p = p.left;
+            }
+            return p;
+        }
+        // 右子树为空 父节点不为空
+        while (node.parent != null && node == node.parent.right){
+            node = node.parent;
+        }
+
+        // 当只有root节点时，node.parent == null
+        return node.parent;
+    }
+
+        // 相当于block
     public static interface Visitor<E>{
         void visit(E element);
     }
@@ -240,6 +383,14 @@ public class BinarySearchTree<E> implements BinaryTreeInfo{
         public Node(E element, Node<E> parent) {
             this.element = element;
             this.parent = parent;
+        }
+
+        public boolean isLeaf(){
+            return left == null && right ==null;
+        }
+
+        public boolean hasTwoChildren(){
+            return left != null && right != null;
         }
     }
 
@@ -260,6 +411,11 @@ public class BinarySearchTree<E> implements BinaryTreeInfo{
 
     @Override
     public Object string(Object node) {
-        return ((Node<E>)node).element;
+        Node<E> myNode = (Node<E>)node;
+        String parentString = "null";
+        if (myNode.parent != null) {
+            parentString = myNode.parent.element.toString();
+        }
+        return myNode.element + "_p(" + parentString + ")";
     }
 }
