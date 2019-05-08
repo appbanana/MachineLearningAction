@@ -32,7 +32,11 @@ public class BinarySearchTree<E> extends BinaryTree<E>{
         elementNotNullCheck(element);
         if (root == null){
             // 第一个节点为跟节点
-            root = new Node(element, null);
+//            root = new Node(element, null);
+            root = createNode(element, null);
+
+            // 添加完元素后进行 avl树调整
+            afterAdd(root);
             size++;
             return;
         }
@@ -56,13 +60,17 @@ public class BinarySearchTree<E> extends BinaryTree<E>{
         }
 
         // 接下来我要执行添加节点功能，一方面我需要父节点，另一方面我需要知道添加到父节点的左边还是右边
-        Node<E> newNode = new Node<>(element, parent);
+//        Node<E> newNode = new Node<>(element, parent);
+        Node<E> newNode = createNode(element, parent);
         if (cmp > 0){
             parent.right = newNode;
         }else{
             parent.left = newNode;
         }
+        // 添加完元素后进行 avl树调整
+        afterAdd(newNode);
         size++;
+
 
     }
 
@@ -110,6 +118,12 @@ public class BinarySearchTree<E> extends BinaryTree<E>{
         }
 
     }
+
+    /**
+     * 添加node之后的调整
+     * @param node 新添加的节点
+     */
+    protected void afterAdd(Node<E> node) { }
 
     private Node<E> node(E element){
         Node<E> p = root;

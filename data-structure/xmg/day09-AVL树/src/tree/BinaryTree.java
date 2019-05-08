@@ -222,6 +222,9 @@ public class BinaryTree<E> implements BinaryTreeInfo {
         return 1 + Math.max(height(node.left), height(node.right));
     }
 
+    protected Node<E> createNode(E element, Node<E> parent){
+        return new Node<>(element, parent);
+    }
     // 寻找当前节点的前驱 node.left.right.right...
     protected Node<E> predecessor(Node<E> node) {
         if (node == null) return null;
@@ -275,7 +278,7 @@ public class BinaryTree<E> implements BinaryTreeInfo {
         BinarySearchTree.Node<E> right;
 
         BinarySearchTree.Node<E> parent;
-        public Node(E element, BinarySearchTree.Node<E> parent) {
+        public Node(E element, Node<E> parent) {
             this.element = element;
             this.parent = parent;
         }
@@ -286,6 +289,14 @@ public class BinaryTree<E> implements BinaryTreeInfo {
 
         public boolean hasTwoChildren(){
             return left != null && right != null;
+        }
+
+        public boolean isLeftChild(){
+            return left != null && this == parent.left;
+        }
+
+        public boolean isRightChild(){
+            return right != null && this == parent.right;
         }
     }
 
@@ -306,11 +317,12 @@ public class BinaryTree<E> implements BinaryTreeInfo {
 
     @Override
     public Object string(Object node) {
-        BinarySearchTree.Node<E> myNode = (Node<E>)node;
-        String parentString = "null";
-        if (myNode.parent != null) {
-            parentString = myNode.parent.element.toString();
-        }
-        return myNode.element + "_p(" + parentString + ")";
+//        BinarySearchTree.Node<E> myNode = (Node<E>)node;
+//        String parentString = "null";
+//        if (myNode.parent != null) {
+//            parentString = myNode.parent.element.toString();
+//        }
+//        return myNode.element + "_p(" + parentString + ")";
+        return node;
     }
 }
