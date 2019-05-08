@@ -7,7 +7,9 @@ import tree.AVLTree;
 public class Main {
     static void test1() {
         Integer data[] = new Integer[] {
-                7, 4, 9, 2, 5, 8, 11, 3, 12, 1
+//                7, 4, 9, 2, 5, 11, 3, 12, 1
+                7, 4, 9, 2, 5, 11, 3, 12
+
         };
 
         AVLTree<Integer> avl = new AVLTree<>();

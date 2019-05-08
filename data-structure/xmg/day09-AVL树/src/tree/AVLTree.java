@@ -20,7 +20,6 @@ public class AVLTree<E> extends BinarySearchTree<E> {
 
         // 因为添加节点只会导致他的祖父节点 或者的祖父的上一级到时失衡 所以要寻找到失衡的那个节点
         while ((node = node.parent) != null){
-            System.out.println("*********");
 
             // 要判断节点是否平衡
             if (isBalanced(node)){
@@ -46,8 +45,33 @@ public class AVLTree<E> extends BinarySearchTree<E> {
     }
 
     private void rotateLeft(Node<E> grand) {
+
         Node<E> parent = grand.right;
-        Node<E> parent
+        Node<E> child = parent.left;
+        grand.right = child;
+        parent.left = grand;
+
+        // 让parent称为子树的根节点
+        parent.parent = grand.parent;
+        if (grand.isLeftChild()) {
+            grand.parent.left = parent;
+        } else if (grand.isRightChild()) {
+            grand.parent.right = parent;
+        } else { // grand是root节点
+            root = parent;
+        }
+
+        // 更新child的parent
+        if (child != null) {
+            child.parent = grand;
+        }
+
+        // 更新grand的parent
+        grand.parent = parent;
+
+        // 更新高度
+        updateHeight(grand);
+        updateHeight(parent);
 
     }
 
@@ -92,19 +116,28 @@ public class AVLTree<E> extends BinarySearchTree<E> {
             if (node.isLeftChild()){
                 // LL 右旋
                 rotateRight(grand);
+                System.out.println("---LL--");
             }else {
                 // LR 先左旋 在右旋
                 rotateLeft(parent);
                 rotateRight(grand);
+                System.out.println("---LR--");
+
             }
         }else {
             if (node.isLeftChild()){
                 // RL 先右旋 在左旋
                 rotateRight(parent);
                 rotateLeft(grand);
+                System.out.println("---RL--");
+
             }else {
                 // RR 左旋
+                System.out.println(grand.element);
+
                 rotateLeft(grand);
+                System.out.println("---RR--");
+
             }
         }
     }
