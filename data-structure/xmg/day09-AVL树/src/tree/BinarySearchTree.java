@@ -94,7 +94,7 @@ public class BinarySearchTree<E> extends BinaryTree<E>{
         }
 
         // 接下来就是删除度为0或者为1的节点
-        Node<E> replacement = node.left != null ? node.left : node.right;
+        Node<E> replacement = (node.left != null) ? node.left : node.right;
         if (replacement == null){
             // replacement 为空说明此时节点的度为0，这时是要删除度为0的节点
             if (node == node.parent.left){
@@ -117,6 +117,9 @@ public class BinarySearchTree<E> extends BinaryTree<E>{
             }
         }
 
+        // 节点删除之后 查看整体是否再次失衡
+        afterRemove(node);
+
     }
 
     /**
@@ -124,6 +127,12 @@ public class BinarySearchTree<E> extends BinaryTree<E>{
      * @param node 新添加的节点
      */
     protected void afterAdd(Node<E> node) { }
+
+    /**
+     * 删除node之后的调整
+     * @param node 被删除的节点
+     */
+    protected void afterRemove(Node<E> node) { }
 
     private Node<E> node(E element){
         Node<E> p = root;

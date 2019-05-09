@@ -34,6 +34,23 @@ public class AVLTree<E> extends BinarySearchTree<E> {
         }
     }
 
+    @Override
+    protected void afterRemove(Node<E> node) {
+        // 因为删除节点只会导致他的父节点或者祖父...节点 或者的祖父的上一级到时失衡 所以要寻找到失衡的那个节点
+        while ((node = node.parent) != null){
+
+            // 要判断节点是否平衡
+            if (isBalanced(node)){
+                // 平衡的话 更新高度
+                updateHeight(node);
+
+            }else {
+                // 重新恢复平衡
+                rebalance(node);
+            }
+        }
+    }
+
     // 二叉搜索树是否平衡
     public boolean isBalanced(Node<E> node){
         return Math.abs(((AVLNode<E>)node).balanceFactor()) <= 1;
@@ -51,27 +68,29 @@ public class AVLTree<E> extends BinarySearchTree<E> {
         grand.right = child;
         parent.left = grand;
 
-        // 让parent称为子树的根节点
-        parent.parent = grand.parent;
-        if (grand.isLeftChild()) {
-            grand.parent.left = parent;
-        } else if (grand.isRightChild()) {
-            grand.parent.right = parent;
-        } else { // grand是root节点
-            root = parent;
-        }
+//        // 让parent称为子树的根节点
+//        parent.parent = grand.parent;
+//        if (grand.isLeftChild()) {
+//            grand.parent.left = parent;
+//        } else if (grand.isRightChild()) {
+//            grand.parent.right = parent;
+//        } else { // grand是root节点
+//            root = parent;
+//        }
+//
+//        // 更新child的parent
+//        if (child != null) {
+//            child.parent = grand;
+//        }
+//
+//        // 更新grand的parent
+//        grand.parent = parent;
+//
+//        // 更新高度
+//        updateHeight(grand);
+//        updateHeight(parent);
 
-        // 更新child的parent
-        if (child != null) {
-            child.parent = grand;
-        }
-
-        // 更新grand的parent
-        grand.parent = parent;
-
-        // 更新高度
-        updateHeight(grand);
-        updateHeight(parent);
+        afterRotate(grand, parent, child);
 
     }
 
@@ -82,6 +101,31 @@ public class AVLTree<E> extends BinarySearchTree<E> {
         grand.left = child;
         parent.right = grand;
 
+//        // 让parent 成为新的跟节点
+//        parent.parent = grand.parent;
+//        if (grand.isLeftChild()){
+//            grand.parent.left = parent;
+//        }else if (grand.isRightChild()){
+//            grand.parent.right = parent;
+//        }else {
+//            root = parent;
+//        }
+//
+//        // 更新child的parent
+//        if (child != null){
+//            child.parent = grand;
+//        }
+//        grand.parent = parent;
+//
+//        // 更新高度
+//        updateHeight(grand);
+//        updateHeight(parent);
+
+        afterRotate(grand, parent, child);
+
+    }
+
+    private void afterRotate(Node<E> grand, Node<E> parent, Node<E> child){
         // 让parent 成为新的跟节点
         parent.parent = grand.parent;
         if (grand.isLeftChild()){
@@ -101,7 +145,6 @@ public class AVLTree<E> extends BinarySearchTree<E> {
         // 更新高度
         updateHeight(grand);
         updateHeight(parent);
-
     }
 
     private void updateHeight(Node<E> node){
