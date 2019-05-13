@@ -23,12 +23,12 @@ public class Main {
 
         System.out.println("---------remove-----------------remove-------remove------");
 
-//        for (int i = 0; i < data.length; i++) {
-//			avl.remove(data[i]);
-//			System.out.println("【" + data[i] + "】");
-//			BinaryTrees.println(avl);
-//			System.out.println("---------------------------------------");
-//		}
+        for (int i = 0; i < data.length; i++) {
+			avl.remove(data[i]);
+			System.out.println("【" + data[i] + "】");
+			BinaryTrees.println(avl);
+			System.out.println("---------------------------------------");
+		}
 
 
         // BinaryTrees.println(avl);

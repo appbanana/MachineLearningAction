@@ -87,7 +87,94 @@ public class RBTree<E> extends BBST<E> {
             return;
         }
 
-        // 接下来就是删除黑色的叶子节点
+        // 接下来就是删除黑色的叶子节点  可能会产生下溢
+        Node<E> parent = node.parent;
+        // 为空的话 删除的则是根节点
+        if (parent == null) return;
+        // 判断删除的节点是left 还是right
+        boolean left = parent.left == null || node.isLeftChild();
+        Node<E> sibling = left ? parent.right : parent.left;
+        if (left){
+            // 删除的是左子节点
+            if (isRed(sibling)){
+                black(sibling);
+                red(parent);
+                rotateLeft(parent);
+                sibling = parent.right;
+            }
+
+            // 下面是删除节点的兄弟节点是黑色
+            if (isBlack(sibling.left) && isBlack(sibling.right)){
+                // 没有红色子节点 父节点下溢
+                boolean parentBlack = isBlack(parent);
+                red(sibling);
+                black(parent);
+                if (parentBlack){
+                    // 如果之前的父节点为黑色 还会产生下溢 接着执行删除
+                    afterRemove(parent, null);
+                }
+
+
+            }else {
+                System.out.println("-----parent-------");
+                System.out.println(parent);
+                // 兄弟节点中至少有一个红色节点
+
+                if (isBlack(sibling.right)){
+                    // 如果兄弟节点左边是黑色节点 需要先旋转一下
+                    rotateRight(sibling);
+                    sibling = parent.right;
+                }
+                // 兄弟节点继承父节点的颜色
+                color(sibling, colorOf(parent));
+                black(sibling.right);
+                black(parent);
+                rotateLeft(parent);
+
+
+            }
+        }else {
+            // 删除黑色子节点是右子节点
+            // 删除节点的兄弟节点是红色的情况
+            // 将兄弟节点是红色的转化为黑色的 和下面黑色的兄弟节点的进行合并处理
+            if (isRed(sibling)){
+                black(sibling);
+                red(parent);
+                rotateRight(parent);
+                sibling = parent.left;
+            }
+
+            // 下面是删除节点的兄弟节点是黑色
+            if (isBlack(sibling.left) && isBlack(sibling.right)){
+                // 没有红色子节点 父节点下溢
+                boolean parentBlack = isBlack(parent);
+                red(sibling);
+                black(parent);
+                if (parentBlack){
+                    // 如果之前的父节点为黑色 还会产生下溢 接着执行删除
+                    afterRemove(parent, null);
+                }
+
+
+            }else {
+                // 兄弟节点中至少有一个红色节点
+
+                if (isBlack(sibling.left)){
+                    // 如果兄弟节点左边是黑色节点 需要先旋转一下
+                    rotateLeft(sibling);
+                    sibling = parent.left;
+                }
+                // 兄弟节点继承父节点的颜色
+                color(sibling, colorOf(parent));
+                black(sibling.left);
+                black(parent);
+                rotateRight(parent);
+
+            }
+        }
+
+
+
 
     }
 
