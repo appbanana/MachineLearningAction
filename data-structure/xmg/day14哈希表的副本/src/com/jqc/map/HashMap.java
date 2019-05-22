@@ -172,43 +172,10 @@ public class HashMap<K, V> implements Map<K, V> {
         Node<K, V> parent = root;
         Node<K, V> node = root;
         int cmp = 0;
-        K k1 = key;
-        Node<K, V> result = null;
-        int hash1 = (k1 == null) ? 0 : k1.hashCode();
-        boolean searched = false;
+        int hash1 = (key == null) ? 0 : key.hashCode();
         while(node != null){
-//            cmp = compare(key, node.key, hash1, node.hash);
+            cmp = compare(key, node.key, hash1, node.hash);
             parent = node;
-            K k2 = node.key;
-            int hash2 = node.hash;
-            if (hash1 > hash2){
-                cmp = 1;
-            }else if (hash1 < hash2){
-                cmp = -1;
-            }else if (Objects.equals(k1, k2)){
-                cmp = 0;
-            }else if (k1 != null && k2 != null
-                    && k1.getClass() == k2.getClass()
-                    && k1 instanceof Comparable
-                    && (cmp = ((Comparable) k1).compareTo(k2)) != 0){
-                // hash值一样 但是不equals 同类可比 但是不相等 什么也不需要做 下面会根据此时cmp判断node向左找还是向右找
-            }else if (searched){
-                //从这开始往下 包括后面的else都是不具有可比较性 只能扫描
-                // 对于扫描 扫描一次就够了 没必要每次都扫描 所以加了一个searched的标志符， 一旦搜索扫描过，直接比较id地址
-                cmp = System.identityHashCode(k1) - System.identityHashCode(k2);
-
-            }else{
-                // 下面不具有可比较性 开始扫描 left不为空 扫描左边 右边不为空扫描右边
-                if ((node.left != null && ((result = node(node.left, k1)) != null))
-                        || (node.right != null && (result = node(node.right, k1)) != null)){
-                    node =result;
-                    cmp = 0;
-                }else {
-                    cmp = System.identityHashCode(k1) - System.identityHashCode(k2);
-                    searched = true;
-                }
-            }
-
             if (cmp > 0){
                 node = node.right;
             }else if (cmp < 0){
@@ -346,48 +313,16 @@ public class HashMap<K, V> implements Map<K, V> {
     }
 
     private Node<K, V> node(K key) {
-        Node<K, V> root = table[index(key)];
-        return node(root, key);
-    }
-
-    private Node<K, V> node(Node<K, V> node, K k1) {
-        int hash1 = (k1 == null) ? 0 : k1.hashCode();
-
-        Node<K, V> result = null;
-        int cmp = 0;
+        Node<K, V> node = table[index(key)];
+        int hash1 = key == null ? 0 : key.hashCode();
         while (node != null){
-            K k2 = node.key;
-            int hash2 = node.hash;
-            if (hash1 > hash2){
+            int cmp = compare(key, node.key, hash1, node.hash);
+            if (cmp == 0) return node;
+            if (cmp > 0) {
                 node = node.right;
-            }else if (hash1 < hash2){
-                node = node.left;
-            }else if (Objects.equals(k1, k2)){
-                return node;
-            }else if (k1 != null && k2 != null
-                    && k1.getClass() == k2.getClass()
-                    && k1 instanceof Comparable
-                    && (cmp = ((Comparable) k1).compareTo(k2)) != 0) {
-                // hash值相同 但不equals 同类而且具有可比性 k1和k2又不相等
-                node = cmp > 0 ? node.right : node.left;
-            }else if (node.right != null && (result = node(node.right, k1)) != null){
-                return result;
-            }else {
+            }else if (cmp < 0){
                 node = node.left;
             }
-//            else if (node.left != null && (result = node(node.left, k1)) != null){
-//                return result;
-//            }else {
-//                return null;
-//            }
-
-//            int cmp = compare(key, node.key, hash1, node.hash);
-//            if (cmp == 0) return node;
-//            if (cmp > 0) {
-//                node = node.right;
-//            }else if (cmp < 0){
-//                node = node.left;
-//            }
         }
 
         return null;

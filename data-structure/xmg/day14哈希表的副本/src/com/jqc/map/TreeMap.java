@@ -1,14 +1,9 @@
 package com.jqc.map;
-
-import com.jqc.printer.BinaryTreeInfo;
-import com.jqc.printer.BinaryTrees;
-
 import java.util.Comparator;
-import java.util.LinkedList;
-import java.util.Objects;
 import java.util.Queue;
+import java.util.LinkedList;
 
-public class HashMap<K, V> implements Map<K, V> {
+public class TreeMap<K, V> implements Map<K, V> {
 
     private static final boolean RED = false;
     private static final boolean BLACK = true;
@@ -16,11 +11,14 @@ public class HashMap<K, V> implements Map<K, V> {
     private int size;
     private Node<K, V> root;
 
-    private Node<K, V>[] table;
-    private static final int DEFAULT_CAPACITY = 1 << 4;
 
-    public HashMap(){
-        table = new Node[DEFAULT_CAPACITY];
+    public TreeMap(){
+        this(null);
+
+    }
+
+    public TreeMap(Comparator<K> comparator){
+        this.comparator = comparator;
     }
 
     @Override
@@ -35,12 +33,8 @@ public class HashMap<K, V> implements Map<K, V> {
 
     @Override
     public void clear() {
-        if (size == 0) return;
-        for (int i = 0; i < table.length; i++) {
-            table[i] = null;
-        }
+        root = null;
         size = 0;
-
     }
 
     @Override
@@ -56,111 +50,61 @@ public class HashMap<K, V> implements Map<K, V> {
 
     @Override
     public V remove(K key) {
+        // 删除 其实删除的是他的前驱后继
         return remove(node(key));
     }
 
     @Override
     public boolean containsKey(K key) {
-        return node(key) != null;
+        return node(key) == null;
     }
 
     @Override
     public boolean containsValue(V value) {
-        if (size == 0) return false;
-        int tableSize = table.length;
-        Queue<Node<K, V>> queue = new LinkedList();
-        for (int i = 0; i < tableSize; i++) {
-            Node<K, V> root = table[i];
-            if (root == null) continue;
-            queue.offer(root);
-            while (!queue.isEmpty()){
-                Node<K, V> node = queue.poll();
-                if (Objects.equals(value, node.value)) return true;
+        if (root == null) return false;
+        Queue<Node<K, V>> queue = new LinkedList<>();
+        queue.offer(root);
+        while (!queue.isEmpty()){
+            Node<K, V> node = queue.poll();
+//            if (value.equals(node.value)) return true;
+            if (valEquals(value, node.value)) return true;
 
-                if (node.left != null) {
-                    queue.offer(node.left);
-                }
-
-                if (node.right != null) {
-                    queue.offer(node.right);
-                }
+            if (node.left != null){
+                queue.offer(node.left);
             }
 
+            if (node.right != null){
+                queue.offer(node.right);
+            }
         }
         return false;
-
     }
 
     @Override
     public void traversal(Visitor<K, V> visitor) {
-        if (visitor == null || size == 0) return;
-        int tableSize = table.length;
-
-        Queue<Node<K, V>> queue = new LinkedList();
-
-        for (int i = 0; i < tableSize; i++) {
-            Node<K, V> root = table[i];
-            if (root == null) continue;
-            queue.offer(root);
-
-            while (!queue.isEmpty()){
-                Node<K, V> node = queue.poll();
-
-                if (visitor.visit(node.key, node.value)) return;
-
-                if (node.left != null) {
-                    queue.offer(node.left);
-                }
-
-                if (node.right != null){
-                    queue.offer(node.right);
-                }
-
-            }
-        }
+        if (visitor == null) return;
+        traversal(root, visitor);
     }
 
-    public void print(){
-        if (size == 0) return;
+    public void traversal(Node<K, V> node, Visitor<K, V> visitor) {
+        if (node == null || visitor.stop) return;
 
-        for (int i = 0; i < table.length; i++) {
-            final Node<K, V> root = table[i];
-            if (root == null) continue;
-            System.out.println("【index = " + i + "】");
-            BinaryTrees.println(new BinaryTreeInfo() {
-                @Override
-                public Object root() {
-                    return root;
-                }
+        traversal(node.left, visitor);
+        if (visitor.stop) return;
+        visitor.visit(node.key, node.value);
+        traversal(node.right, visitor);
 
-                @Override
-                public Object left(Object node) {
-                    return ((Node<K, V>)node).left;
-                }
+    }
 
-                @Override
-                public Object right(Object node) {
-                    return ((Node<K, V>)node).right;
-                }
-
-                @Override
-                public Object string(Object node) {
-                    return node;
-                }
-            });
-            System.out.println("---------------------------------------------------");
-        }
+        private boolean valEquals(V v1, V v2) {
+        return v1 == null ? v2 == null : v1.equals(v2);
     }
 
     private V add(K key, V value){
-//        elementNotNullCheck(key);
-        // 更具key 找到对应的索引 key-->hash值-->找到对应的索引
-        int index = index(key);
-        Node<K, V> root= table[index];
+        elementNotNullCheck(key);
         if (root == null){
             // 第一个节点为跟节点
             root = new Node<>(key, value, null);
-            table[index] = root;
 
             // 添加完元素后进行 avl树调整
             afterAdd(root);
@@ -172,43 +116,9 @@ public class HashMap<K, V> implements Map<K, V> {
         Node<K, V> parent = root;
         Node<K, V> node = root;
         int cmp = 0;
-        K k1 = key;
-        Node<K, V> result = null;
-        int hash1 = (k1 == null) ? 0 : k1.hashCode();
-        boolean searched = false;
         while(node != null){
-//            cmp = compare(key, node.key, hash1, node.hash);
+            cmp = compare(key, node.key);
             parent = node;
-            K k2 = node.key;
-            int hash2 = node.hash;
-            if (hash1 > hash2){
-                cmp = 1;
-            }else if (hash1 < hash2){
-                cmp = -1;
-            }else if (Objects.equals(k1, k2)){
-                cmp = 0;
-            }else if (k1 != null && k2 != null
-                    && k1.getClass() == k2.getClass()
-                    && k1 instanceof Comparable
-                    && (cmp = ((Comparable) k1).compareTo(k2)) != 0){
-                // hash值一样 但是不equals 同类可比 但是不相等 什么也不需要做 下面会根据此时cmp判断node向左找还是向右找
-            }else if (searched){
-                //从这开始往下 包括后面的else都是不具有可比较性 只能扫描
-                // 对于扫描 扫描一次就够了 没必要每次都扫描 所以加了一个searched的标志符， 一旦搜索扫描过，直接比较id地址
-                cmp = System.identityHashCode(k1) - System.identityHashCode(k2);
-
-            }else{
-                // 下面不具有可比较性 开始扫描 left不为空 扫描左边 右边不为空扫描右边
-                if ((node.left != null && ((result = node(node.left, k1)) != null))
-                        || (node.right != null && (result = node(node.right, k1)) != null)){
-                    node =result;
-                    cmp = 0;
-                }else {
-                    cmp = System.identityHashCode(k1) - System.identityHashCode(k2);
-                    searched = true;
-                }
-            }
-
             if (cmp > 0){
                 node = node.right;
             }else if (cmp < 0){
@@ -232,7 +142,7 @@ public class HashMap<K, V> implements Map<K, V> {
         // 添加完元素后进行 avl树调整
         afterAdd(newNode);
         size++;
-
+        
         return null;
 
     }
@@ -331,68 +241,6 @@ public class HashMap<K, V> implements Map<K, V> {
         grand.parent = parent;
     }
 
-    private int index(K key) {
-
-        if (key == null) return 0;
-        int hash = key.hashCode();
-        // 虽然你实现了hashcode 鬼知道你怎么实现的呀 保险起见，java官方又对hash高低16位异或处理
-        return (hash ^ (hash >>> 16)) & (table.length - 1);
-
-    }
-
-    private int index(Node<K, V> node) {
-        return (node.hash ^ (node.hash >>> 16)) & (table.length - 1);
-
-    }
-
-    private Node<K, V> node(K key) {
-        Node<K, V> root = table[index(key)];
-        return node(root, key);
-    }
-
-    private Node<K, V> node(Node<K, V> node, K k1) {
-        int hash1 = (k1 == null) ? 0 : k1.hashCode();
-
-        Node<K, V> result = null;
-        int cmp = 0;
-        while (node != null){
-            K k2 = node.key;
-            int hash2 = node.hash;
-            if (hash1 > hash2){
-                node = node.right;
-            }else if (hash1 < hash2){
-                node = node.left;
-            }else if (Objects.equals(k1, k2)){
-                return node;
-            }else if (k1 != null && k2 != null
-                    && k1.getClass() == k2.getClass()
-                    && k1 instanceof Comparable
-                    && (cmp = ((Comparable) k1).compareTo(k2)) != 0) {
-                // hash值相同 但不equals 同类而且具有可比性 k1和k2又不相等
-                node = cmp > 0 ? node.right : node.left;
-            }else if (node.right != null && (result = node(node.right, k1)) != null){
-                return result;
-            }else {
-                node = node.left;
-            }
-//            else if (node.left != null && (result = node(node.left, k1)) != null){
-//                return result;
-//            }else {
-//                return null;
-//            }
-
-//            int cmp = compare(key, node.key, hash1, node.hash);
-//            if (cmp == 0) return node;
-//            if (cmp > 0) {
-//                node = node.right;
-//            }else if (cmp < 0){
-//                node = node.left;
-//            }
-        }
-
-        return null;
-    }
-
 
     // 真正的删除逻辑 使用前驱和后继都可以 这里使用后继进行替换要删除的节点
     // 删除节点 有三种类型 删除度为2的几点，此时删除的是它的前驱后后继 他的前驱或者后继只能是度为0或者度为1的节点
@@ -412,13 +260,12 @@ public class HashMap<K, V> implements Map<K, V> {
 
         // 接下来就是删除度为0或者为1的节点
         Node<K, V> replacement = (node.left != null) ? node.left : node.right;
-        int index = index(replacement.key);
         if (replacement != null) { // node是度为1的节点
             // 更改parent
             replacement.parent = node.parent;
             // 更改parent的left、right的指向
             if (node.parent == null) { // node是度为1的节点并且是根节点
-                table[index] = replacement;
+                root = replacement;
             } else if (node == node.parent.left) {
                 node.parent.left = replacement;
             } else { // node == node.parent.right
@@ -428,7 +275,7 @@ public class HashMap<K, V> implements Map<K, V> {
             // 删除节点之后的处理
             afterRemove(replacement);
         } else if (node.parent == null) { // node是叶子节点并且是根节点
-            table[index] = null;
+            root = null;
 
             // 删除节点之后的处理
             afterRemove(node);
@@ -551,6 +398,25 @@ public class HashMap<K, V> implements Map<K, V> {
 
     }
 
+    // 寻找当前节点的前驱 node.left.right.right...
+    private Node<K, V> predecessor(Node<K, V> node) {
+        if (node == null) return null;
+        Node<K, V> p = node.left;
+        // 这个可以看做在左子树中找前驱
+        if (p != null){
+            while (p.right != null){
+                p = p.right;
+            }
+            return p;
+        }
+        //  左子树为空  这时返回的是当前节点的父节点
+        while (node.parent != null && node == node.parent.left){
+            node = node.parent;
+        }
+
+        // 当只有root节点时，node.parent == null
+        return node.parent;
+    }
 
     // 寻找当前节点的后继 node.right.left.left...
     private Node<K, V> successor(Node<K, V> node) {
@@ -572,36 +438,30 @@ public class HashMap<K, V> implements Map<K, V> {
         return node.parent;
     }
 
-
-    /**
-         * @return 返回值等于0，代表e1和e2相等；返回值大于0，代表e1大于e2；返回值小于于0，代表e1小于e2
-         */
-    private int compare(K k1, K k2, int hash1, int hash2) {
-        // 比较哈希值
-        int result = hash1 - hash2;
-        // 如果hash值不相等 直接返回
-        if (result != 0) return result;
-
-        // 如果两个值相等 直接返回0
-        if (Objects.equals(k1, k2)) return 0;
-
-        // 哈希值相等 但是不equals
-        if (k1 != null && k2 != null){
-
-            // 比较类名
-            String k1cls = k1.getClass().getName();
-            String k2cls = k2.getClass().getName();
-            result = k1cls.compareTo(k2cls);
-            if (result != 0) return result;
-
-            if (k1 instanceof Comparable){
-                return ((Comparable)k1).compareTo(k2);
+    private Node<K, V> node(K key){
+        Node<K, V> p = root;
+        while (p != null){
+            int cmp = compare(key, p.key);
+            if (cmp == 0) return p;
+            if (cmp > 0){
+                p = p.right;
+            }else if (cmp < 0){
+                p = p.left;
             }
         }
-        // 同一种类型，哈希值相等，但是不equals，但是不具备可比较性
-        return System.identityHashCode(k1) - System.identityHashCode(k2);
+        return null;
     }
 
+    /**
+     * @return 返回值等于0，代表e1和e2相等；返回值大于0，代表e1大于e2；返回值小于于0，代表e1小于e2
+     */
+    private int compare(K e1, K e2) {
+        if (comparator != null){
+            return comparator.compare(e1, e2);
+        }
+        return ((Comparable<K>)e1).compareTo(e2);
+    }
+    
     private void elementNotNullCheck(K key) {
         if (key == null) {
             throw new IllegalArgumentException("key must not be null");
@@ -638,7 +498,6 @@ public class HashMap<K, V> implements Map<K, V> {
     private class Node<K, V> {
         K key;
         V value;
-        int hash; // key的hash值
         Node<K, V> left;
         Node<K, V> right;
         Node<K, V> parent;
@@ -648,7 +507,6 @@ public class HashMap<K, V> implements Map<K, V> {
             this.key = key;
             this.value = value;
             this.parent = parent;
-            this.hash = key == null ? 0 : key.hashCode();
         }
 
         public boolean isLeaf(){
@@ -676,11 +534,6 @@ public class HashMap<K, V> implements Map<K, V> {
                 return parent.left;
             }
             return null;
-        }
-
-        @Override
-        public String toString() {
-            return "Node_" + key + "_" + value;
         }
     }
 
