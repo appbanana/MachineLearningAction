@@ -18,6 +18,8 @@ public class HashMap<K, V> implements Map<K, V> {
 
     private Node<K, V>[] table;
     private static final int DEFAULT_CAPACITY = 1 << 4;
+    private static final float DEFAULT_LOAD_FACTOR = 0.75f;
+
 
     public HashMap(){
         table = new Node[DEFAULT_CAPACITY];
@@ -152,19 +154,28 @@ public class HashMap<K, V> implements Map<K, V> {
         }
     }
 
+    protected Node<K, V> createNode(K key, V value, Node<K, V> parent) {
+        return new Node<>(key, value, parent);
+    }
+
+    protected void afterRemove(Node<K, V> willNode, Node<K, V> removedNode) { }
+
     private V add(K key, V value){
-//        elementNotNullCheck(key);
+        // 添加之前先看看 是否要扩容
+        resize();
+
         // 更具key 找到对应的索引 key-->hash值-->找到对应的索引
         int index = index(key);
         Node<K, V> root= table[index];
         if (root == null){
             // 第一个节点为跟节点
-            root = new Node<>(key, value, null);
+//            root = new Node<>(key, value, null);
+            root = createNode(key, value, null);
             table[index] = root;
+            size++;
 
             // 添加完元素后进行 avl树调整
-            afterAdd(root);
-            size++;
+           fixAfterAdd(root);
             return null;
         }
 
@@ -176,6 +187,7 @@ public class HashMap<K, V> implements Map<K, V> {
         Node<K, V> result = null;
         int hash1 = (k1 == null) ? 0 : k1.hashCode();
         boolean searched = false;
+
         while(node != null){
 //            cmp = compare(key, node.key, hash1, node.hash);
             parent = node;
@@ -223,21 +235,23 @@ public class HashMap<K, V> implements Map<K, V> {
         }
 
         // 接下来我要执行添加节点功能，一方面我需要父节点，另一方面我需要知道添加到父节点的左边还是右边
-        Node<K, V> newNode = new Node<>(key, value, parent);
+//        Node<K, V> newNode = new Node<>(key, value, parent);
+        Node<K, V> newNode = createNode(key, value, parent);;
         if (cmp > 0){
             parent.right = newNode;
         }else{
             parent.left = newNode;
         }
-        // 添加完元素后进行 avl树调整
-        afterAdd(newNode);
+
         size++;
+        // 添加完元素后进行 avl树调整
+       fixAfterAdd(newNode);
 
         return null;
 
     }
 
-    private void afterAdd(Node<K, V> node) {
+    private void fixAfterAdd(Node<K, V> node) {
         Node<K, V> parent = node.parent;
         // 如果添加的是跟节点 直接染成黑色就可以
         if (parent == null) {
@@ -255,7 +269,7 @@ public class HashMap<K, V> implements Map<K, V> {
         if (isRed(uncle)){
             black(parent);
             black(uncle);
-            afterAdd(red(grand));
+           fixAfterAdd(red(grand));
             return;
         }
         // 叔父节点是黑色
@@ -321,7 +335,8 @@ public class HashMap<K, V> implements Map<K, V> {
         }else if (grand.isRightChild()){
             grand.parent.right = parent;
         }else {
-            root = parent;
+//            root = parent;
+            table[index(grand)] = parent;
         }
 
         // 更新child的parent
@@ -393,12 +408,108 @@ public class HashMap<K, V> implements Map<K, V> {
         return null;
     }
 
+    // 扩容
+    private void resize(){
+        // 如果装填因子小于0.75
+        if (size / table.length <= DEFAULT_LOAD_FACTOR) return;
+
+        // 现在暂时保存一下老的table
+        Node<K, V> []oldTable = table;
+        // 扩容 扩为原来的一倍
+        table = new Node[oldTable.length << 1];
+
+        // table 里面都是红黑树的根节点
+        Queue<Node<K, V>> queue = new LinkedList<>();
+        for (int i = 0; i < oldTable.length; i++) {
+            if (oldTable[i] == null) continue;
+            queue.offer(oldTable[i]);
+
+            while (!queue.isEmpty()){
+                Node<K, V> node = queue.poll();
+
+                if (node.left != null){
+                    queue.offer(node.left);
+                }
+                if (node.right != null){
+                    queue.offer(node.right);
+                }
+
+                // 将node移动到新的空间去
+                moveNode(node);
+            }
+
+        }
+    }
+
+    private void moveNode(Node<K, V> newNode){
+
+        // 这需要重置node的parent，left，right 因为要重新计算索引 重新存放
+        newNode.parent = null;
+        newNode.left = null;
+        newNode.right = null;
+        newNode.color = RED;
+
+        int index = index(newNode);
+        Node<K, V> root = table[index];
+        if (root == null){
+            root = newNode;
+            table[index] = newNode;
+           fixAfterAdd(root);
+            return;
+        }
+
+        // 新的节点添加到红黑树上
+        Node<K, V> parent = root;
+        Node<K, V> node = root;
+        K k1 = newNode.key;
+        int hash1 = newNode.hash;
+        int cmp = 0;
+
+        while (node != null){
+            parent = node;
+            K k2 = node.key;
+            int hash2 = node.hash;
+            if (hash1 > hash2){
+                cmp = 1;
+            }else if (hash1 < hash2){
+                cmp = -1;
+            }else if (k1 != null && k2 != null
+                    && k1 instanceof Comparable
+                    && k1.getClass() == k2.getClass()
+                    && (cmp = ((Comparable) k1).compareTo(k2)) != 0){
+
+            }else {
+                cmp = System.identityHashCode(k1) - System.identityHashCode(k2);
+            }
+
+            if (cmp > 0){
+                node = node.right;
+            }else {
+                node = node.left;
+            }
+        }
+
+        newNode.parent = parent;
+        if (cmp > 0){
+            parent.right = newNode;
+        }else {
+            parent.left = newNode;
+        }
+
+        // 修复红黑树性质
+       fixAfterAdd(newNode);
+
+    }
 
     // 真正的删除逻辑 使用前驱和后继都可以 这里使用后继进行替换要删除的节点
     // 删除节点 有三种类型 删除度为2的几点，此时删除的是它的前驱后后继 他的前驱或者后继只能是度为0或者度为1的节点
     // 删除度为1的节点 删除度为0的节点
     private V remove(Node<K, V> node) {
         if (node == null) return null;
+
+        Node<K, V> willNode = node;
+
+
         size--;
         V oldValue = node.value;
 
@@ -406,13 +517,17 @@ public class HashMap<K, V> implements Map<K, V> {
             Node<K, V> s = successor(node);
             node.key = s.key;
             node.value = s.value;
+            // 删除的时候这要注意 这里的hash也要替换
+            node.hash = s.hash;
+
             // 赋值为node  node就是接下来要删除的节点
             node = s;
         }
 
         // 接下来就是删除度为0或者为1的节点
         Node<K, V> replacement = (node.left != null) ? node.left : node.right;
-        int index = index(replacement.key);
+//        int index = index(replacement.key);
+        int index = index(node);
         if (replacement != null) { // node是度为1的节点
             // 更改parent
             replacement.parent = node.parent;
@@ -426,12 +541,12 @@ public class HashMap<K, V> implements Map<K, V> {
             }
 
             // 删除节点之后的处理
-            afterRemove(replacement);
+            fixAfterRemove(replacement);
         } else if (node.parent == null) { // node是叶子节点并且是根节点
             table[index] = null;
 
             // 删除节点之后的处理
-            afterRemove(node);
+            fixAfterRemove(node);
         } else { // node是叶子节点，但不是根节点
             if (node == node.parent.left) {
                 node.parent.left = null;
@@ -440,15 +555,16 @@ public class HashMap<K, V> implements Map<K, V> {
             }
 
             // 删除节点之后的处理
-            afterRemove(node);
+            fixAfterRemove(node);
         }
 
+        afterRemove(willNode, node);
         return oldValue;
 
 
     }
 
-    private void afterRemove(Node<K, V> node) {
+    private void fixAfterRemove(Node<K, V> node) {
         // 如果删除的节点是红色 直接删掉就可以 不需要其他操作
 //        if (isRed(node)) return;
 
@@ -486,7 +602,7 @@ public class HashMap<K, V> implements Map<K, V> {
                 black(parent);
                 if (parentBlack){
                     // 如果之前的父节点为黑色 还会产生下溢 接着执行删除
-                    afterRemove(parent);
+                    fixAfterRemove(parent);
                 }
 
 
@@ -525,7 +641,7 @@ public class HashMap<K, V> implements Map<K, V> {
                 black(parent);
                 if (parentBlack){
                     // 如果之前的父节点为黑色 还会产生下溢 接着执行删除
-                    afterRemove(parent);
+                    fixAfterRemove(parent);
                 }
 
 
@@ -573,35 +689,6 @@ public class HashMap<K, V> implements Map<K, V> {
     }
 
 
-    /**
-         * @return 返回值等于0，代表e1和e2相等；返回值大于0，代表e1大于e2；返回值小于于0，代表e1小于e2
-         */
-    private int compare(K k1, K k2, int hash1, int hash2) {
-        // 比较哈希值
-        int result = hash1 - hash2;
-        // 如果hash值不相等 直接返回
-        if (result != 0) return result;
-
-        // 如果两个值相等 直接返回0
-        if (Objects.equals(k1, k2)) return 0;
-
-        // 哈希值相等 但是不equals
-        if (k1 != null && k2 != null){
-
-            // 比较类名
-            String k1cls = k1.getClass().getName();
-            String k2cls = k2.getClass().getName();
-            result = k1cls.compareTo(k2cls);
-            if (result != 0) return result;
-
-            if (k1 instanceof Comparable){
-                return ((Comparable)k1).compareTo(k2);
-            }
-        }
-        // 同一种类型，哈希值相等，但是不equals，但是不具备可比较性
-        return System.identityHashCode(k1) - System.identityHashCode(k2);
-    }
-
     private void elementNotNullCheck(K key) {
         if (key == null) {
             throw new IllegalArgumentException("key must not be null");
@@ -635,7 +722,7 @@ public class HashMap<K, V> implements Map<K, V> {
     }
 
 
-    private class Node<K, V> {
+    protected static class Node<K, V> {
         K key;
         V value;
         int hash; // key的hash值
