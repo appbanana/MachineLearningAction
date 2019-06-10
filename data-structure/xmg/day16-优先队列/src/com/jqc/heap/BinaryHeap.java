@@ -1,10 +1,10 @@
 package com.jqc.heap;
-import java.util.Comparator;
 
-import com.jqc.printer.BinaryTreeInfo;
+
+import java.util.Comparator;
 //import com.jqc.printer.*;
 
-public class BinaryHeap<E> extends AbstractHeap<E> implements  BinaryTreeInfo {
+public class BinaryHeap<E> extends AbstractHeap<E> {
 
 //    private int size =0;
     private E[] elements;
@@ -183,30 +183,4 @@ public class BinaryHeap<E> extends AbstractHeap<E> implements  BinaryTreeInfo {
         }
     }
 
-    @Override
-    public Object root() {
-        return 0;
-    }
-
-    @Override
-    public Object left(Object node) {
-        Integer index = (Integer) node;
-        index = (index << 1) + 1;
-        return index >= size ? null : index;
-    }
-
-    @Override
-    public Object right(Object node) {
-        Integer index = (Integer) node;
-        index = (index << 1) + 2;
-        return index >= size ? null : index;
-
-    }
-
-    @Override
-    public Object string(Object node) {
-        Integer index = (Integer) node;
-
-        return elements[index];
-    }
 }
