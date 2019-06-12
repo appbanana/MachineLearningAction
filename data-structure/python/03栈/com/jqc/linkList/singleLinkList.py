@@ -4,7 +4,10 @@
 # T = TypeVar('T')
 
 # from com.jqc.abstractList import AbstractList
-from ..abstractList import AbstractList
+"""
+单链表
+"""
+from com.jqc.abstractList import AbstractList
 
 
 class Node(object):
@@ -16,7 +19,7 @@ class Node(object):
 		return str(self.element)
 
 
-class LinkList(AbstractList):
+class SingleLinkList(AbstractList):
 	
 	def __init__(self):
 		super().__init__()
@@ -114,5 +117,3 @@ class LinkList(AbstractList):
 		for i in range(index):
 			node = node.next
 		return node
-	
-
