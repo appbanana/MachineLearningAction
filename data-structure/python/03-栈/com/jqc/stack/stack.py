@@ -25,6 +25,13 @@ class Stack(object):
 		"""
 		return self.arrayList.size()
 	
+	def clear(self):
+		"""
+		清空栈
+		:return:
+		"""
+		self.arrayList.clear()
+	
 	def is_empty(self) -> bool:
 		"""
 		返回栈是否为空

@@ -24,6 +24,13 @@ class Queue(object):
 		"""
 		return self.linkList.size()
 	
+	def clear(self):
+		"""
+		清空
+		:return:
+		"""
+		self.linkList.clear()
+	
 	def is_empty(self) -> bool:
 		"""
 		返回队列是否为空
