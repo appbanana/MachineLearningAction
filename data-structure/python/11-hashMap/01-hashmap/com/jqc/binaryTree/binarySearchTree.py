@@ -192,7 +192,7 @@ class BinarySearchTree(BinaryTree):
 			#
 			return self._comparator(e1, e2)
 		# 如果相等返回0 大于返回1 小于返回-1
-		return 0 if operator.eq(e1, 32) else (1 if operator.gt(e1, e2) else -1)
+		return 0 if operator.eq(e1, e2) else (1 if operator.gt(e1, e2) else -1)
 	
 	def __node(self, element):
 		"""

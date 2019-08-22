@@ -458,6 +458,7 @@ class BinarySearchTree(object):
 		if self.__comparator is not None:
 			#
 			return self.__comparator(e1, e2)
-		# python3 中取消cmp比较函数，python3中使用operator代替，operator中有很多比较函数，可以参考
-		# 个人认为这里可以直接写成e1 - e2
-		return operator.sub(e1, e2)
+		# python3 中取消cmp比较函数，python3中使用operator代替，operator中有很多比较函数
+		return 0 if operator.eq(e1, e2) else (1 if operator.gt(e1, e2) else -1)
+
+		
