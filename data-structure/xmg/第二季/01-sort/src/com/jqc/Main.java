@@ -1,13 +1,74 @@
 package com.jqc;
+import java.util.Arrays;
+
+import com.jqc.tools.Asserts;
 import com.jqc.tools.Integers;
 import com.jqc.tools.Times;
-
-import java.util.Arrays;
+import com.jqc.sort.Sort;
+import com.jqc.sort.BubbleSort1;
+import com.jqc.sort.BubbleSort2;
+import com.jqc.sort.BubbleSort3;
+import com.jqc.sort.HeapSort;
+import com.jqc.sort.SelectionSort;
 
 public class Main {
 
     public static void main(String[] args) {
-        testBubble();
+//        testBubble();
+//        testSelectionSort();
+        // 测试面向对象的编程
+//        testObjSort();
+        Integer[] array = Integers.random(10000, 1, 10000);
+
+        testSorts(array,
+                new BubbleSort3(),
+                new SelectionSort(),
+                new HeapSort());
+    }
+
+    static void testSorts(Integer[] array, Sort... sorts) {
+        for(Sort sort: sorts) {
+            sort.sort(Integers.copy(array));
+        }
+        // 这就需要自定义比较器
+        Arrays.sort(sorts);
+        for(Sort sort: sorts) {
+            System.out.println(sort);
+        }
+    }
+
+    static void testObjSort() {
+        Integer[] array = Integers.random(10000, 1, 10000);
+        Integer[] array1 = Integers.copy(array);
+        Integer[] array2 = Integers.copy(array);
+        Integer[] array3 = Integers.copy(array);
+
+
+        BubbleSort3 bubbleSort3 = new BubbleSort3();
+        Times.test("BubbleSort3", () -> {
+            bubbleSort3.sort(array1);
+        });
+        Asserts.test(Integers.isAscOrder(array1));
+
+        SelectionSort selectionSort = new SelectionSort();
+        Times.test("SelectionSort", () -> {
+            selectionSort.sort(array2);
+        });
+        Asserts.test(Integers.isAscOrder(array2));
+
+
+        HeapSort heapSort = new HeapSort();
+        Times.test("HeapSort", () -> {
+            heapSort.sort(array3);
+        });
+        Asserts.test(Integers.isAscOrder(array3));
+    }
+
+    static void testSelectionSort() {
+        Integer[] array = Integers.random(10, 1, 20);
+        System.out.println(Arrays.toString(array));
+        selectionSort(array);
+        System.out.println(Arrays.toString(array));
     }
 
     static void testBubble(){
@@ -93,6 +154,24 @@ public class Main {
             i = sortedIndex;
         }
 
+    }
+
+    static void selectionSort(Integer[] array) {
+        /**
+         * 选择排序的主要思想 每轮找出最大值,然后与末尾元素交换
+         */
+        for (int end = array.length -1; end > 0; end--) {
+            Integer maxIndex = 0;
+            for (int begin = 0; begin <= end; begin++) {
+                if (array[begin] > array[maxIndex]) {
+                    maxIndex = begin;
+                }
+            }
+            Integer temp = array[end];
+            array[end] = array[maxIndex];
+            array[maxIndex] = temp;
+
+        }
     }
 
 
