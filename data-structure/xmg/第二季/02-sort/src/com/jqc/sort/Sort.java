@@ -44,6 +44,7 @@ public abstract class Sort<T extends Comparable<T>> implements Comparable<Sort<T
      * @return e1 > e2, 返回大于0; e1 = e2, 返回等于0; e1 < e2, 返回小于0
      */
     protected int cmpElement(T e1, T e2) {
+        cmpCount++;
         return e1.compareTo(e2);
     }
 
@@ -78,7 +79,6 @@ public abstract class Sort<T extends Comparable<T>> implements Comparable<Sort<T
         String compareCountStr = "比较:" + numberString(cmpCount);
         String swapCountStr = "交换:" + numberString(swapCount);
         String stableStr = "稳定性：" + isStable();
-
         return "【" + getClass().getSimpleName() + "】\n"
                 + stableStr + "\t"
                 + timeStr + "\t"
