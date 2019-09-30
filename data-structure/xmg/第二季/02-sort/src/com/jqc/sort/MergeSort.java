@@ -38,6 +38,8 @@ public class MergeSort<T extends Comparable<T>> extends Sort<T> {
         for (int i = li; i < le; i++) {
             leftArray[i] = array[begin + i];
         }
+        // 如果左边先结束,右边的不用动,直接结束就可以
+        // 如果左右交替加入 则会进入下面
         while (li < le) {
             if (ri < re && cmpElement(array[ri], leftArray[li]) < 0) {
 //                array[ai] = array[ri];

@@ -5,6 +5,7 @@ public class HeapSort<T extends Comparable<T>> extends Sort<T> {
 
     @Override
     protected void sort() {
+        // 堆排序 实际上是对选择排序的一种改进
         heapSize = array.length;
 
         // 先批量建堆
