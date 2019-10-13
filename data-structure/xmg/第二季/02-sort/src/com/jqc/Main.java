@@ -16,6 +16,8 @@ import com.jqc.sort.InsertionSort3;
 import com.jqc.sort.MergeSort;
 import com.jqc.sort.QuickSort;
 import com.jqc.sort.ShellSort;
+import com.jqc.sort.CountingSort;
+import com.jqc.sort.RadixSort;
 
 public class Main {
 
@@ -32,7 +34,9 @@ public class Main {
 //                new InsertionSort3(),
                 new MergeSort(),
                 new QuickSort(),
-                new ShellSort()
+                new ShellSort(),
+                new CountingSort(),
+                new RadixSort()
         );
 
     }

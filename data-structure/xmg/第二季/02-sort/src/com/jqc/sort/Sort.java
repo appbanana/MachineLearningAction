@@ -97,6 +97,10 @@ public abstract class Sort<T extends Comparable<T>> implements Comparable<Sort<T
     private boolean isStable() {
         // 如果是希尔排序 直接返回false
         if (this instanceof ShellSort) return false;
+        // 计数排序是稳定排序
+        if (this instanceof CountingSort) return true;
+        // 基数排序是稳定排序
+        if (this instanceof RadixSort) return true;
 
         Student[]  students = new Student[20];
         for (int i = 0; i < students.length; i++) {
