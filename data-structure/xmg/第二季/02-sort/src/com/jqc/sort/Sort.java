@@ -95,6 +95,9 @@ public abstract class Sort<T extends Comparable<T>> implements Comparable<Sort<T
     }
 
     private boolean isStable() {
+        // 如果是希尔排序 直接返回false
+        if (this instanceof ShellSort) return false;
+
         Student[]  students = new Student[20];
         for (int i = 0; i < students.length; i++) {
             students[i] = new Student(i * 10, 10);

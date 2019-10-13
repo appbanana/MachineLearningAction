@@ -14,21 +14,25 @@ import com.jqc.sort.InsertionSort1;
 import com.jqc.sort.InsertionSort2;
 import com.jqc.sort.InsertionSort3;
 import com.jqc.sort.MergeSort;
+import com.jqc.sort.QuickSort;
+import com.jqc.sort.ShellSort;
 
 public class Main {
 
     public static void main(String[] args) {
         // 测试二分搜索
         testBinarySearch();
-        Integer[] array = Integers.random(10000, 1, 10000);
+        Integer[] array = Integers.random(20000, 1, 20000);
         testSorts(array,
-                new BubbleSort3(),
-                new SelectionSort(),
+//                new BubbleSort3(),
+//                new SelectionSort(),
                 new HeapSort(),
-                new InsertionSort1(),
-                new InsertionSort2(),
-                new InsertionSort3(),
-                new MergeSort()
+//                new InsertionSort1(),
+//                new InsertionSort2(),
+//                new InsertionSort3(),
+                new MergeSort(),
+                new QuickSort(),
+                new ShellSort()
         );
 
     }
