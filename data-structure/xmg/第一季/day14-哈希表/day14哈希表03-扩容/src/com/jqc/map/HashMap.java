@@ -154,7 +154,7 @@ public class HashMap<K, V> implements Map<K, V> {
         }
     }
 
-    private V add(K key, V value){
+private V add(K key, V value){
         // 添加之前先看看 是否要扩容
         resize();
 
@@ -327,7 +327,6 @@ public class HashMap<K, V> implements Map<K, V> {
         }else if (grand.isRightChild()){
             grand.parent.right = parent;
         }else {
-//            root = parent;
             table[index(grand)] = parent;
         }
 

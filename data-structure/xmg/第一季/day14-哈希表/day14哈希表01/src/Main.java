@@ -33,17 +33,17 @@ public class Main {
         map.put(p2, 7);
         map.put(null, 6);
 
-//        System.out.println(map.size());
-//		System.out.println(map.remove("jack"));
-//		System.out.println(map.get("jack"));
-//		System.out.println(map.size());
+  //      System.out.println(map.size());
+		// System.out.println(map.remove("jack"));
+		// System.out.println(map.get("jack"));
+		// System.out.println(map.size());
 
-//        System.out.println(map.containsKey(p1));
-//        System.out.println(map.containsKey(null));
-//        System.out.println(map.containsValue(6));
-//        System.out.println(map.containsValue(1));
+  //      System.out.println(map.containsKey(p1));
+  //      System.out.println(map.containsKey(null));
+  //      System.out.println(map.containsValue(6));
+  //      System.out.println(map.containsValue(1));
 
-//        System.out.println(map.get(p1));
+  //      System.out.println(map.get(p1));
 
         map.traversal(new Map.Visitor<Object, Object>() {
             @Override

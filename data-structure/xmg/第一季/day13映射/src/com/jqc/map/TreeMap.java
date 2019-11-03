@@ -96,7 +96,7 @@ public class TreeMap<K, V> implements Map<K, V> {
 
     }
 
-        private boolean valEquals(V v1, V v2) {
+    private boolean valEquals(V v1, V v2) {
         return v1 == null ? v2 == null : v1.equals(v2);
     }
 
