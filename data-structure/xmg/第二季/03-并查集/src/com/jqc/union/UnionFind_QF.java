@@ -7,20 +7,18 @@ public class UnionFind_QF extends UnionFind {
     }
 
     /**
-     * 通过parent不断网上找 知道找到根节点
+     * 直接找到根节点 时间复杂度为O(1)
      * @param v
      * @return 根节点
      */
     public int find(int v) {
         rangeCheck(v);
-        while (parents[v] != v) {
-            v = parents[v];
-        }
-        return v;
+        return parents[v];
     }
 
     /**
      * 将v1中所有节点都嫁接到v2节点上
+     * 时间复杂度为O(n)
      * @param v1
      * @param v2
      */

@@ -145,6 +145,7 @@ public class ListGraph<V, E> implements Graph<V, E> {
         }
     }
 
+    // 边静态类
     private static class Edge<V, E> {
         // 边的起始点
         Vertex<V, E> from;
